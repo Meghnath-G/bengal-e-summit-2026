@@ -1,0 +1,145 @@
+.flashback-page-container .section-gallery {
+  background: transparent;
+  padding: 120px 48px 140px;
+}
+
+.flashback-page-container .slider-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(135deg, rgba(212, 168, 83, 0.08) 0%, rgba(4, 6, 14, 0.92) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(212, 168, 83, 0.5);
+  box-shadow: 0 0 28px rgba(212, 168, 83, 0.12), inset 0 0 16px rgba(212, 168, 83, 0.04);
+  border-radius: 12px;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.flashback-page-container .slider-container {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 100%;
+}
+
+.flashback-page-container .slider-slide {
+  min-width: 100%;
+  height: 500px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.flashback-page-container .slider-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.flashback-page-container .slider-slide:hover img {
+  transform: scale(1.03);
+}
+
+.flashback-page-container .slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(4, 6, 14, 0.8);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.flashback-page-container .slider-btn:hover {
+  background: var(--gold);
+  color: var(--bg);
+  box-shadow: 0 0 16px rgba(212, 168, 83, 0.5);
+}
+
+.flashback-page-container .slider-prev {
+  left: 32px;
+}
+
+.flashback-page-container .slider-next {
+  right: 32px;
+}
+
+.flashback-page-container .lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 6, 14, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 9500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.flashback-page-container .lightbox-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.flashback-page-container .lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(212, 168, 83, 0.3);
+  transform: scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  object-fit: contain;
+}
+
+.flashback-page-container .lightbox-modal.active .lightbox-content {
+  transform: scale(1);
+}
+
+.flashback-page-container .lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-size: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.flashback-page-container .lightbox-close:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .flashback-page-container .slider-slide {
+    height: 300px;
+  }
+  .flashback-page-container .slider-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+  .flashback-page-container .slider-prev {
+    left: 12px;
+  }
+  .flashback-page-container .slider-next {
+    right: 12px;
+  }
+}

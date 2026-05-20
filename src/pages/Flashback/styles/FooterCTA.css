@@ -1,0 +1,61 @@
+.flashback-page-container .section-footer {
+  padding: 120px 24px 80px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.flashback-page-container .footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flashback-page-container .footer-sub {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 6px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.flashback-page-container .footer-heading {
+  font-family: 'Cinzel', serif;
+  font-weight: 900;
+  font-size: clamp(32px, 5vw, 48px);
+  color: var(--gold);
+  line-height: 1.2;
+}
+
+.flashback-page-container .footer-year {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--parchment);
+  margin-top: 8px;
+}
+
+.flashback-page-container .footer-rule {
+  width: 120px;
+  height: 1px;
+  background: var(--gold);
+  margin: 40px auto;
+  opacity: 0.5;
+}
+
+.flashback-page-container .footer-chevron {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.flashback-page-container .footer-chevron-icon {
+  font-size: 20px;
+  color: var(--gold);
+  animation: bounceDown 1.8s ease-in-out infinite;
+}

@@ -3,24 +3,24 @@ import './FlashbackSection.css';
 
 // Exact image list from original main.js
 const IMAGE_FILES = [
-  'DSC_0128.JPG',   'IMG_0597.JPG',   'IMG_7162.JPG',   'IMG_9607.JPG',   'IMG_9610.JPG',
-  'IMG_9645.JPG',   '_A740023.JPG',   '_A740046.JPG',   '_DSC0205.JPG',   '_DSC0248.JPG',
-  '_DSC5041.JPG',   '_DSC5052.JPG',   '_DSC5068.JPG',   '_DSC9446.JPG',   '_DSC9462.JPG',
-  '_DSC9468.JPG',   '_DSC9485.JPG',   '_DSC9500.JPG',   '_DSC9536.JPG',   '_DSC9598.JPG',
-  '_DSC9624.JPG',   '_MG_0802.JPG',   '_MG_5474.JPG',   '_MG_5486.JPG',   '_MG_5810.JPG',
-  '_MG_5847.JPG',   '_MG_5857.JPG',   '_MG_5872.JPG',   '_ZVE7217.JPG',   '_ZVE7522.JPG',
+  'DSC_0128.JPG', 'IMG_0597.JPG', 'IMG_7162.JPG', 'IMG_9607.JPG', 'IMG_9610.JPG',
+  'IMG_9645.JPG', '_A740023.JPG', '_A740046.JPG', '_DSC0205.JPG', '_DSC0248.JPG',
+  '_DSC5041.JPG', '_DSC5052.JPG', '_DSC5068.JPG', '_DSC9446.JPG', '_DSC9462.JPG',
+  '_DSC9468.JPG', '_DSC9485.JPG', '_DSC9500.JPG', '_DSC9536.JPG', '_DSC9598.JPG',
+  '_DSC9624.JPG', '_MG_0802.JPG', '_MG_5474.JPG', '_MG_5486.JPG', '_MG_5810.JPG',
+  '_MG_5847.JPG', '_MG_5857.JPG', '_MG_5872.JPG', '_ZVE7217.JPG', '_ZVE7522.JPG',
 ];
 
 // Row slices — exact from original main.js
 const ROWS = [
-  { startIndex: 0,  endIndex: 10, dir: 'left',  className: 'row-1' },
+  { startIndex: 0, endIndex: 10, dir: 'left', className: 'row-1' },
   { startIndex: 10, endIndex: 20, dir: 'right', className: 'row-2' },
-  { startIndex: 20, endIndex: 30, dir: 'left',  className: 'row-3' },
+  { startIndex: 20, endIndex: 30, dir: 'left', className: 'row-3' },
 ];
 
 export default function FlashbackSection() {
-  const videoRef    = useRef(null);
-  const playBtnRef  = useRef(null);
+  const videoRef = useRef(null);
+  const playBtnRef = useRef(null);
 
   // Hover pause/resume — exact from original main.js
   useEffect(() => {
@@ -30,20 +30,20 @@ export default function FlashbackSection() {
       const enter = () => row.classList.add('is-paused');
       const leave = () => row.classList.remove('is-paused');
       const tstart = () => row.classList.add('is-paused');
-      const tend   = () => row.classList.remove('is-paused');
+      const tend = () => row.classList.remove('is-paused');
       row.addEventListener('mouseenter', enter);
       row.addEventListener('mouseleave', leave);
-      row.addEventListener('touchstart',  tstart, { passive: true });
-      row.addEventListener('touchend',    tend,   { passive: true });
-      row.addEventListener('touchcancel', tend,   { passive: true });
+      row.addEventListener('touchstart', tstart, { passive: true });
+      row.addEventListener('touchend', tend, { passive: true });
+      row.addEventListener('touchcancel', tend, { passive: true });
       handlers.push({ row, enter, leave, tstart, tend });
     });
     return () => {
       handlers.forEach(({ row, enter, leave, tstart, tend }) => {
         row.removeEventListener('mouseenter', enter);
         row.removeEventListener('mouseleave', leave);
-        row.removeEventListener('touchstart',  tstart);
-        row.removeEventListener('touchend',    tend);
+        row.removeEventListener('touchstart', tstart);
+        row.removeEventListener('touchend', tend);
         row.removeEventListener('touchcancel', tend);
       });
     };
@@ -52,7 +52,7 @@ export default function FlashbackSection() {
   // Video play/pause toggle — exact from original main.js
   const handlePlayPause = () => {
     const video = videoRef.current;
-    const btn   = playBtnRef.current;
+    const btn = playBtnRef.current;
     if (!video || !btn) return;
     if (video.paused) {
       video.play();
@@ -121,7 +121,7 @@ export default function FlashbackSection() {
               muted
               playsInline
               onClick={handlePlayPause}
-              // src="/videos/for_carousel/video.mp4" — add when MP4 file is available
+            // src="/videos/for_carousel/video.mp4" — add when MP4 file is available
             >
               {/* MP4 source placeholder — file not yet available */}
               <source src="/videos/for_carousel/video.mp4" type="video/mp4" />

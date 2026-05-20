@@ -15,7 +15,7 @@ function ChakraContainer() {
 
   // Load the model and high-fidelity PBR textures using standard Drei loader hooks
   const { scene } = useGLTF('/models/sudarshan_chakra/Chakra.glb');
-  
+
   const [colorMap, metalRoughMap, normalMap] = useTexture([
     '/models/sudarshan_chakra/DefaultMaterial_Base_color_1.png',
     '/models/sudarshan_chakra/DefaultMaterial_Metallic-DefaultMaterial_Roughness_2@channel.png',
@@ -128,7 +128,7 @@ export default function StatisticsSection() {
   return (
     <section className="statistics-showcase" id="statistics-showcase" ref={sectionRef}>
       <div className="stats-container">
-        
+
         {/* Left Side: Dynamic React Three Fiber Canvas with the Sudarshan Chakra Model */}
         <div className="stats-model-container" id="chakra-container">
           <Canvas
@@ -161,15 +161,15 @@ export default function StatisticsSection() {
         {/* Right Side: Editorial Stats Blocks */}
         <div className="stats-content">
           <div className="stat-block">
-            <h3 className="stat-number">50K+</h3>
-            <p className="stat-text">Global Participants</p>
+            <h3 className="stat-number">10K+</h3>
+            <p className="stat-text">Total Participants</p>
           </div>
           <div className="stat-block">
-            <h3 className="stat-number">100+</h3>
-            <p className="stat-text">Industry Leaders</p>
+            <h3 className="stat-number">50+</h3>
+            <p className="stat-text">Total Industry Leaders</p>
           </div>
           <div className="stat-block">
-            <h3 className="stat-number">20+</h3>
+            <h3 className="stat-number">15+</h3>
             <p className="stat-text">Mega Events</p>
           </div>
         </div>

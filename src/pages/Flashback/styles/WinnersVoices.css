@@ -1,0 +1,195 @@
+.flashback-page-container .section-wv {
+  background: transparent;
+  padding: 80px 48px;
+}
+
+.flashback-page-container .wv-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.flashback-page-container .wv-card {
+  flex: 1;
+  background: linear-gradient(135deg, rgba(212, 168, 83, 0.08) 0%, rgba(4, 6, 14, 0.92) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(212, 168, 83, 0.5);
+  box-shadow: 0 0 28px rgba(212, 168, 83, 0.12), inset 0 0 16px rgba(212, 168, 83, 0.04);
+  border-radius: 8px;
+  padding: 36px;
+  transition: all 0.3s ease;
+}
+
+.flashback-page-container .wv-card:hover {
+  border-color: rgba(212, 168, 83, 0.9);
+  box-shadow: 0 0 48px rgba(212, 168, 83, 0.28);
+  transform: translateY(-6px);
+}
+
+.flashback-page-container .card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(212, 168, 83, 0.2);
+}
+
+.flashback-page-container .card-icon {
+  font-size: 20px;
+}
+
+.flashback-page-container .card-title {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+.flashback-page-container .champions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 48px;
+}
+
+.flashback-page-container .winner-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  border-left: 3px solid var(--gold);
+  background: rgba(212, 168, 83, 0.05);
+  border-radius: 8px;
+  flex: 0 0 calc(33.333% - 32px);
+  max-width: calc(33.333% - 32px);
+  transition: all 0.3s ease;
+}
+
+.flashback-page-container .winner-row:hover {
+  border-left-color: var(--parchment);
+  background: rgba(212, 168, 83, 0.1);
+}
+
+.flashback-page-container .winner-prize {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.flashback-page-container .winner-row:hover .winner-prize {
+  animation: shimmer 1.5s ease infinite;
+}
+
+.flashback-page-container .winner-names {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.flashback-page-container .winner-name {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--parchment);
+  transition: color 0.3s ease;
+}
+
+/* Voices specific styles */
+.flashback-page-container .voices-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.flashback-page-container .voice-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(212, 168, 83, 0.1);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.flashback-page-container .voice-row:last-child {
+  border-bottom: none;
+}
+
+.flashback-page-container .voice-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(212, 168, 83, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--bg);
+  flex-shrink: 0;
+  transition: box-shadow 0.3s ease;
+}
+
+.flashback-page-container .voice-row:hover .voice-avatar {
+  box-shadow: 0 0 16px rgba(212, 168, 83, 0.6);
+}
+
+.flashback-page-container .voice-row:hover .voice-name {
+  color: var(--parchment);
+  transform: scale(1.1);
+}
+
+.flashback-page-container .voice-row:hover .voice-designation {
+  transform: translateY(-2px);
+}
+
+.flashback-page-container .voice-name {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--parchment);
+  transition: all 0.3s ease;
+  transform-origin: left center;
+  display: inline-block;
+}
+
+.flashback-page-container .voice-designation {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 2px;
+  transition: transform 0.3s ease;
+}
+
+@keyframes shimmer {
+  0% { color: var(--gold); text-shadow: none; }
+  50% { color: var(--parchment); text-shadow: 0 0 12px rgba(212, 168, 83, 0.8); }
+  100% { color: var(--gold); text-shadow: none; }
+}
+
+@media (max-width: 992px) {
+  .flashback-page-container .wv-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .flashback-page-container .winner-row {
+    flex: 0 0 calc(50% - 24px);
+    max-width: calc(50% - 24px);
+  }
+}
+
+@media (max-width: 576px) {
+  .flashback-page-container .winner-row {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

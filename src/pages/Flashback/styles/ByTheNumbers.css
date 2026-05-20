@@ -1,0 +1,66 @@
+.flashback-page-container .section-numbers {
+  background: transparent;
+  padding: 100px 48px 120px;
+  position: relative;
+}
+
+.flashback-page-container .section-numbers::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212, 168, 83, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.flashback-page-container .numbers-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.flashback-page-container .number-tile {
+  background: linear-gradient(135deg, rgba(212, 168, 83, 0.1) 0%, rgba(4, 6, 14, 0.88) 100%);
+  border: 1.5px solid rgba(212, 168, 83, 0.55);
+  box-shadow: 0 0 24px rgba(212, 168, 83, 0.18), inset 0 0 12px rgba(212, 168, 83, 0.05);
+  border-radius: 8px;
+  padding: 36px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.flashback-page-container .number-tile:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 40px rgba(212, 168, 83, 0.35);
+  transform: translateY(-4px);
+}
+
+.flashback-page-container .tile-stat {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 56px);
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.flashback-page-container .tile-label {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .flashback-page-container .numbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .flashback-page-container .numbers-grid {
+    grid-template-columns: 1fr;
+  }
+}
