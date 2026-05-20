@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic Loading Screen Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Cinzel -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Just for the demo background after loading finishes */
+        body { 
+            margin: 0; 
+            background-color: #111; 
+            color: #fff; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh;
+            font-family: 'Cinzel', serif;
+        }
+    </style>
+</head>
+<body class="loading">
+
+    <!-- KALKI CINEMATIC PRELOADER -->
+    <div id="kalki-cinematic-preloader">
+        <!-- Lightning Flash Overlay -->
+        <div id="kalki-lightning"></div>
+        
+        <!-- Particles Container -->
+        <div id="kalki-particles"></div>
+        
+        <!-- Background Glow -->
+        <div class="kalki-bg-glow"></div>
+        
+        <div class="kalki-loader-content">
+            <!-- Mystical Divine Chakra -->
+            <div class="kalki-symbol-container">
+                <div class="kalki-divine-chakra">
+                    <div class="kalki-chakra-ring"></div>
+                    <div class="kalki-chakra-inner"></div>
+                </div>
+            </div>
+            
+            <!-- Titles -->
+            <div class="kalki-title-container">
+                <h1 class="kalki-title">E-SUMMIT</h1>
+                <h2 class="kalki-subtitle">IGNITING THE ENTREPRENEURIAL SPIRIT</h2>
+            </div>
+            
+            <!-- Loading Bar -->
+            <div class="kalki-loading-wrapper">
+                <div class="kalki-loading-track">
+                    <div class="kalki-loading-bar" id="kalki-loading-bar"></div>
+                </div>
+                <div class="kalki-loading-text" id="kalki-progress-text">00%</div>
+            </div>
+        </div>
+        
+        <!-- Blackout Flash for Transition -->
+        <div id="kalki-white-flash"></div>
+    </div>
+
+    <h1>Welcome to the Website Content</h1>
+
+    <script src="main.js"></script>
+</body>
+</html>

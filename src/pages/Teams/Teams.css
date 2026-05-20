@@ -1,0 +1,229 @@
+/* ================================================================
+   TEAMS PAGE STYLES - STRICTLY ISOLATED & SCOPED
+   ================================================================ */
+
+.teams-page-container {
+    /* Color Palette & Variables scoped to this container */
+    --gold-light: #f0cf7a;
+    --gold-mid: #d1a654;
+    --gold-dark: #87611a;
+    --gold-accent: #c8922a;
+    --black-base: #030201;
+    --card-border: rgba(208, 166, 84, 0.45);
+    
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Cormorant Garamond', serif;
+
+    --transition-timing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-duration: 0.38s;
+
+    background-color: var(--black-base);
+    background-image: 
+        radial-gradient(ellipse at 50% -5%, rgba(200, 146, 42, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 50% -15%, rgba(240, 207, 122, 0.08) 0%, transparent 70%);
+    background-attachment: fixed;
+    color: var(--gold-light);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* HERO SECTION */
+.teams-page-container .hero {
+    padding-top: clamp(100px, 15vh, 180px); /* Tighter and fluid height */
+    padding-bottom: clamp(40px, 8vh, 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.teams-page-container .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.teams-page-container .hero h1 {
+    font-family: 'Cinzel', serif !important;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.teams-page-container .subtitle {
+    font-family: var(--font-heading);
+    font-size: clamp(0.85rem, 2vw, 1.1rem);
+    letter-spacing: 6px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* SECTIONS */
+.teams-page-container .team-section {
+    padding: 1rem clamp(16px, 4vw, 32px) 4rem clamp(16px, 4vw, 32px);
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.teams-page-container .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    color: var(--gold-light);
+    letter-spacing: 8px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.teams-page-container .glowing-divider {
+    width: 50px;
+    height: 2px;
+    background: var(--gold-light);
+    border-radius: 2px;
+    margin: 0 auto 2.5rem auto;
+    box-shadow: 0 0 8px 1px rgba(240, 207, 122, 0.5);
+}
+
+/* CARDS */
+.teams-page-container .card-grid {
+    display: grid;
+    gap: 2.5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.teams-page-container .single-card {
+    grid-template-columns: 220px;
+}
+
+.teams-page-container .four-col {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.teams-page-container .three-col {
+    grid-template-columns: repeat(3, 220px);
+}
+
+@media (max-width: 1200px) {
+    .teams-page-container .four-col {
+        grid-template-columns: repeat(2, 220px);
+    }
+    .teams-page-container .three-col {
+        grid-template-columns: repeat(2, 220px);
+    }
+}
+
+@media (max-width: 768px) {
+    .teams-page-container .four-col, 
+    .teams-page-container .three-col {
+        grid-template-columns: 220px;
+    }
+    .teams-page-container .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.teams-page-container .team-card {
+    position: relative;
+    border: 1px solid var(--card-border);
+    background: rgba(10, 8, 6, 0.95);
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.teams-page-container .card-image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    will-change: transform;
+    transition: transform var(--transition-duration) var(--transition-timing),
+                filter var(--transition-duration) var(--transition-timing);
+}
+
+.teams-page-container .card-panel {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    background: transparent;
+    border-top: 1px solid var(--card-border);
+    text-align: center;
+    z-index: 2;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.teams-page-container .card-name {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.teams-page-container .card-name:not(:last-child) {
+    margin-bottom: 0.3rem;
+}
+
+.teams-page-container .card-role {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0.9;
+}
+
+/* HOVER EFFECTS */
+.teams-page-container .team-card:hover .card-image {
+    transform: scale(1.06);
+    filter: brightness(0.85);
+}
+
+.teams-page-container .card-panel:hover .card-name {
+    transform: scale(1.06) translateY(-2px);
+    color: #fff;
+    text-shadow: 0 0 10px rgba(240, 207, 122, 0.8);
+}
+
+/* COMING SOON */
+.teams-page-container .coming-soon-container {
+    display: inline-block;
+    padding: 2rem;
+}
+
+.teams-page-container .coming-soon {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    letter-spacing: 6px;
+    color: var(--gold-mid);
+    margin-bottom: 0.5rem;
+}
+
+.teams-page-container .thin-line {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, var(--gold-mid), transparent);
+}
+
+/* SCROLL REVEAL INITIAL STATES */
+.teams-page-container .section-title, 
+.teams-page-container .glowing-divider, 
+.teams-page-container .team-card, 
+.teams-page-container .coming-soon-container {
+    opacity: 0;
+    transform: translateY(28px);
+}

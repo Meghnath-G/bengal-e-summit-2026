@@ -1,0 +1,258 @@
+/* ================================================================
+   FLASHBACK SECTION CSS — Exact from landing_page/style.css
+   ================================================================ */
+
+:root {
+    --bg-color: #000000;
+    --surface-color: #151312;
+    --accent-color: #ffb95e;
+    --ghost-border: rgba(82, 69, 54, 0.15);
+    --amber-glow: rgba(255, 185, 94, 0.10);
+    --amber-glow-strong: rgba(255, 185, 94, 0.25);
+}
+
+.flashback-section {
+    padding: 100px 0 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.eyebrow {
+    color: var(--accent-color);
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.giant-heading {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 1.1;
+    position: relative;
+    text-shadow: 0 0 40px rgba(255, 185, 94, 0.15);
+    margin: 0;
+}
+
+.heading-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 150%;
+    background: radial-gradient(ellipse at center, rgba(255, 185, 94, 0.15) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(20px);
+}
+
+/* Carousel Container */
+.carousel-container {
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+}
+
+.carousel-mask {
+    width: 100%;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.carousel-row {
+    width: 100%;
+    margin-bottom: 24px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-row:last-child { margin-bottom: 0; }
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* ── Scroll animations ── */
+@keyframes scrollLeft {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+    0%   { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+.row-1 .carousel-track { animation: scrollLeft  32s linear infinite; }
+.row-2 .carousel-track { animation: scrollRight 38s linear infinite; }
+.row-3 .carousel-track { animation: scrollLeft  46s linear infinite; }
+
+/* Pause via JS class */
+.carousel-row.is-paused .carousel-track { animation-play-state: paused; }
+
+/* Card Styling */
+.card {
+    width: clamp(160px, 20vw, 294px);
+    height: clamp(114px, 14.3vw, 210px);
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--surface-color);
+    border: 1px solid var(--ghost-border);
+    flex-shrink: 0;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.4s ease;
+    cursor: pointer;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 8px 24px var(--amber-glow);
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: block;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Ghost border overlay */
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 185, 94, 0);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    pointer-events: none;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 15px 35px var(--amber-glow-strong);
+}
+
+.card:hover img    { transform: scale(1.09); }
+.card:hover::after { border-color: rgba(255, 185, 94, 0.3); }
+
+/* Row 2 — dimmed images */
+.row-2 .card img {
+    opacity: 0.38;
+    filter: brightness(55%);
+    transition: opacity 0.4s ease, filter 0.4s ease, transform 0.5s ease;
+    will-change: opacity, filter, transform;
+}
+
+.row-2 .card:hover img {
+    opacity: 0.6;
+    filter: brightness(80%);
+}
+
+/* Floating Video Player */
+.floating-video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    pointer-events: none;
+}
+
+.video-wrapper {
+    width: clamp(280px, 80vw, 480px);
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    pointer-events: auto;
+    border: 1px solid var(--ghost-border);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 40px var(--amber-glow);
+    background-color: var(--surface-color);
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.play-pause-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(21, 19, 18, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 185, 94, 0.3);
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.play-pause-btn:hover {
+    background: rgba(21, 19, 18, 0.6);
+    border-color: rgba(255, 185, 94, 0.6);
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 0 20px var(--amber-glow-strong);
+}
+
+.play-pause-btn svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 2px;
+}
+
+.play-pause-btn.paused svg { margin-left: 0; }
+
+/* ================================================================
+   RESPONSIVE & PERFORMANCE SCALING
+   ================================================================ */
+@media (max-width: 1024px) {
+    .giant-heading { font-size: clamp(3.5rem, 6vw, 5.5rem); }
+}
+
+@media (max-width: 768px) {
+    .giant-heading { font-size: clamp(2.5rem, 8vw, 3.5rem); }
+    .flashback-section { padding: 60px 0 40px; }
+    .eyebrow { font-size: 0.75rem; }
+    
+    /* Improve mobile touch scroll if they swipe it directly */
+    .carousel-track {
+        gap: 12px;
+    }
+}

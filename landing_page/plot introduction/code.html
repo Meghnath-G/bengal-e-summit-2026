@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BENGAL E-SUMMIT 2026 — ACT I</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Noto+Serif:wght@400;700&amp;family=Newsreader:opsz,wght@6-72,400;6-72,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#3a2f15",
+              "on-error-container": "#ffdad6",
+              "error": "#ffb4ab",
+              "on-background": "#e0e2ef",
+              "outline": "#9b8f7e",
+              "tertiary": "#dbc8a4",
+              "on-primary-fixed": "#271900",
+              "secondary-fixed-dim": "#ffb3ac",
+              "surface-container-low": "#181b25",
+              "tertiary-fixed-dim": "#d7c5a0",
+              "on-tertiary-fixed-variant": "#52452a",
+              "surface-container-high": "#272a33",
+              "on-surface-variant": "#d2c5b2",
+              "primary": "#f2c36b",
+              "surface-container": "#1d1f29",
+              "on-primary": "#412d00",
+              "on-secondary-fixed": "#410003",
+              "surface-variant": "#32343e",
+              "on-primary-container": "#573d00",
+              "primary-fixed-dim": "#eec068",
+              "on-tertiary-container": "#4d4125",
+              "secondary-container": "#8e1c1c",
+              "surface": "#10131c",
+              "on-primary-fixed-variant": "#5d4200",
+              "outline-variant": "#4e4637",
+              "inverse-surface": "#e0e2ef",
+              "surface-bright": "#363943",
+              "on-secondary": "#680007",
+              "inverse-on-surface": "#2d303a",
+              "secondary": "#ffb3ac",
+              "surface-container-highest": "#32343e",
+              "tertiary-fixed": "#f4e0bb",
+              "secondary-fixed": "#ffdad6",
+              "surface-container-lowest": "#0b0e17",
+              "on-tertiary-fixed": "#241a04",
+              "on-secondary-fixed-variant": "#8a1a1a",
+              "background": "#10131c",
+              "on-surface": "#e0e2ef",
+              "on-secondary-container": "#ff9e96",
+              "primary-fixed": "#ffdea6",
+              "inverse-primary": "#7b5804",
+              "on-error": "#690005",
+              "surface-dim": "#10131c",
+              "primary-container": "#d4a853",
+              "surface-tint": "#eec068",
+              "tertiary-container": "#bead8a",
+              "error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Cinzel"],
+              "body": ["Cormorant Garamond"],
+              "label": ["Noto Serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .film-grain {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        pointer-events: none;
+        z-index: 40;
+        opacity: 0.08;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+      .cinematic-vignette {
+        background: radial-gradient(circle, transparent 20%, rgba(11, 14, 23, 0.95) 100%);
+      }
+      .progress-line {
+        height: 2px;
+        background: linear-gradient(to right, #8b1a1a 0%, #f2c36b 40%, transparent 40%);
+        width: 100%;
+      }
+      .text-shadow-deep {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary/30 selection:text-primary">
+<div class="film-grain"></div>
+<!-- Top Progress Line -->
+<div class="fixed top-0 left-0 w-full z-[60]">
+<div class="progress-line"></div>
+</div>
+<!-- Navigation Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-6 bg-stone-950/20 backdrop-blur-md">
+<div class="font-['Cinzel'] text-xl tracking-[0.2em] text-[#d2c5b2]">BENGAL E-SUMMIT 2026</div>
+<nav class="hidden md:flex items-center space-x-12">
+<a class="font-['Cinzel'] tracking-[0.1em] uppercase text-sm text-[#d2c5b2] opacity-80 hover:text-[#f2c36b] hover:opacity-100 transition-all duration-500" href="#">EVENTS</a>
+<a class="font-['Cinzel'] tracking-[0.1em] uppercase text-sm text-[#d2c5b2] opacity-80 hover:text-[#f2c36b] hover:opacity-100 transition-all duration-500" href="#">SPEAKERS</a>
+<a class="font-['Cinzel'] tracking-[0.1em] uppercase text-sm text-[#d2c5b2] opacity-80 hover:text-[#f2c36b] hover:opacity-100 transition-all duration-500" href="#">SCHEDULE</a>
+</nav>
+<button class="font-['Cinzel'] tracking-[0.1em] uppercase text-sm bg-primary-container text-on-primary px-8 py-2 hover:brightness-110 transition-all duration-300">
+            REGISTER
+        </button>
+</header>
+<!-- Background Canvas -->
+<main class="relative h-screen w-full overflow-hidden bg-surface-dim">
+<!-- Hero Image Context -->
+<div class="absolute inset-0 z-0 scale-110">
+<img alt="Cinematic frame of a massive ancient stone gate surrounded by a futuristic crowd" class="w-full h-full object-cover opacity-60" data-alt="Ancient gate ruins with heavy iron scaffolding and cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd3g9vf1tLrdB3X8-fedOI88Sti18UhJqGIfdD5eu7NyoodrPSpBswe1iUe4MyvukaAD6K2eApewbEupP9z-rD4FVFDzBxC084iUvPHvsQzhAJbGgmD2Cdk8dFH6aNNDfsIxyjLhdqECTdmUR5Gaop06m0naL-pi7IBnIjOAdh0a4BVBy2DgVRYpuE2IN7KRT1GhUbZB8A9jVhiiPlS87f37Q9wuiq_B-aJmsqE3bFg0yASYCYGreG21hwNQMmIYyZAbqAm1CdtA"/>
+<!-- Left-heavy dark overlay -->
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent z-10"></div>
+<!-- Overall vignette -->
+<div class="absolute inset-0 cinematic-vignette z-20"></div>
+</div>
+<!-- Content Canvas -->
+<div class="relative z-30 h-full w-full flex flex-col justify-end p-12">
+<!-- Plot Text Block -->
+<div class="max-w-[500px] mb-12 border-l-2 border-[#8b1a1a] pl-8">
+<!-- Tag -->
+<span class="block font-['Cinzel'] font-normal text-[10px] tracking-[0.3em] text-[#8b1a1a] mb-4 uppercase">
+                    ACT I — THE PROBLEM
+                </span>
+<!-- Main Narrative Text -->
+<p class="font-['Cormorant_Garamond'] text-3xl md:text-4xl italic text-[#e8d5b0] leading-tight text-shadow-deep">
+                    2898 AD. The world's greatest civilization lies in ruin. Ancient temples. Iron scaffolding. A broken economy.
+                </p>
+</div>
+<!-- Subtle Decorative Element (Relic Chip style) -->
+<div class="absolute bottom-12 right-12 flex items-center gap-4 opacity-40">
+<span class="font-['Cinzel'] text-[10px] tracking-widest text-[#d2c5b2]">CONTINUE THE JOURNEY</span>
+<span class="material-symbols-outlined text-primary text-sm">south</span>
+</div>
+</div>
+</main>
+<!-- Footer Hidden for Focus during Plot Scroll -->
+<footer class="hidden w-full flex flex-col items-center py-12 px-8 border-t border-[#d4a853]/10 bg-[#0b0e17]">
+<div class="font-['Cinzel'] text-[#d4a853] mb-4">BENGAL E-SUMMIT</div>
+<div class="flex gap-8 mb-6">
+<a class="font-['Cormorant_Garamond'] italic tracking-wider text-xs text-[#d2c5b2]/60 hover:text-[#f2c36b] transition-colors" href="#">PRIVACY</a>
+<a class="font-['Cormorant_Garamond'] italic tracking-wider text-xs text-[#d2c5b2]/60 hover:text-[#f2c36b] transition-colors" href="#">TERMS</a>
+<a class="font-['Cormorant_Garamond'] italic tracking-wider text-xs text-[#d2c5b2]/60 hover:text-[#f2c36b] transition-colors" href="#">CONTACT</a>
+</div>
+<p class="font-['Cormorant_Garamond'] italic tracking-wider text-xs text-[#d2c5b2]/60">© 2026 BENGAL E-SUMMIT. AN ANCIENT FUTURE.</p>
+</footer>
+</body></html>

@@ -1,0 +1,573 @@
+/* ================================================================
+   HERO SECTION CSS — Exact preservation from landing_page/style.css
+   ================================================================ */
+
+/* Scroll Sequence Container */
+.scroll-sequence-container {
+    position: relative;
+    width: 100%;
+    min-height: 850vh;
+    overflow: clip;
+}
+
+.canvas-wrapper {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #04060e;
+    z-index: 1;
+}
+
+#sequence-canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.blackout-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #04060e;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* ── Hero Section ── */
+.hero-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 20;
+    pointer-events: none;
+    isolation: isolate;
+    will-change: opacity, transform;
+}
+
+.hero-readability-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(4, 6, 14, 0.7) 0%, rgba(4, 6, 14, 0.2) 40%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-content {
+    pointer-events: auto;
+}
+
+.hero-brand-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(24px, 4vw, 60px);
+    width: 100%;
+    max-width: 1250px;
+    margin: clamp(160px, 16vh, 200px) auto 0.75rem;
+    padding: 0 40px;
+}
+
+.hero-brand-title {
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: clamp(0.7rem, 1.4vw, 1.15rem);
+    color: #ebd197;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+    flex-shrink: 0;
+}
+
+.hero-logo-img {
+    height: clamp(83px, 13vw, 140px);
+    width: auto;
+    object-fit: contain;
+}
+
+.hero-logo-img.iem-logo {
+    height: clamp(92px, 14vw, 152px);
+}
+
+.hero-summit-symbol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem auto 0.75rem auto;
+    width: 100%;
+}
+
+.hero-summit-logo {
+    height: clamp(105px, 8.5vh, 95px);
+    width: auto;
+    object-fit: contain;
+    opacity: 0.95;
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.7));
+}
+
+.hero-title {
+    margin-bottom: 2.25rem;
+    line-height: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.cinematic-text {
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    color: #f0cf7a;
+    background: linear-gradient(to bottom, #f0cf7a 0%, #d1a654 40%, #87611a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.55)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7));
+    display: inline-block;
+}
+
+.hero-title .line-1,
+.hero-title .line-2 {
+    font-weight: 700;
+    font-size: clamp(3rem, 8.5vw, 7.5rem);
+    letter-spacing: 0.02em;
+    padding: 5px 0;
+    transform: scaleY(1.15);
+    transform-origin: center;
+    margin: 5px 0;
+}
+
+.hero-title .line-2 {
+    font-size: clamp(2.8rem, 7.5vw, 6.8rem);
+}
+
+.hero-title .line-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.hero-title .year-text {
+    font-weight: 700;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    letter-spacing: 0.3em;
+    padding: 5px 0;
+}
+
+.decorative-line {
+    width: clamp(30px, 10vw, 100px);
+    height: 2px;
+    background: linear-gradient(to right, transparent, #b8872e, transparent);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-event-date {
+    font-size: clamp(1rem, 2.5vw, 1.8rem);
+    letter-spacing: 0.15em;
+    margin-top: 1.25rem;
+    font-weight: 700;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.hero-venue {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(0.85rem, 1.35vw, 1.05rem);
+    font-weight: 700;
+    color: #ffe74a;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 1.05rem;
+    margin-bottom: 0.7rem;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 1), 0 0 20px rgba(255, 225, 148, 0.25);
+    line-height: 1.6;
+    text-align: center;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.btn-solid {
+    display: inline-block;
+    background-color: #8b1a1a;
+    color: #e8d5b0;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 16px 36px;
+    letter-spacing: 0.1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-solid:hover {
+    background-color: #a31e1e;
+}
+
+.btn-outline-gold {
+    display: inline-block;
+    border: 1px solid #d4a853;
+    color: #d4a853;
+    font-family: 'Cinzel', serif;
+    text-decoration: none;
+    padding: 16px 36px;
+    letter-spacing: 0.1em;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: rgba(4, 6, 14, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-outline-gold:hover {
+    background-color: rgba(212, 168, 83, 0.12);
+    border-color: #f0cf7a;
+    color: #f0cf7a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 168, 83, 0.15);
+}
+
+.scroll-indicator {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    opacity: 0.8;
+}
+
+.scroll-indicator span {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ebd197;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, #d4a853, transparent);
+}
+
+/* ── Plot Section ── */
+.plot-section {
+    position: fixed;
+    bottom: 10vh;
+    left: 6vw;
+    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
+    max-width: 580px;
+    padding: 32px 48px 32px 32px;
+    background: linear-gradient(to right, rgba(4, 6, 14, 0.65) 0%, rgba(4, 6, 14, 0.15) 70%, transparent 100%);
+}
+
+.plot-tag {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.4em;
+    color: #ff3e3e;
+    text-shadow: 0 0 15px rgba(255, 62, 62, 0.3), 0 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1.2rem;
+}
+
+.plot-divider {
+    width: 2px;
+    height: 50px;
+    background: linear-gradient(to bottom, #ff3e3e, rgba(255, 62, 62, 0.2), transparent);
+    box-shadow: 0 0 12px rgba(255, 62, 62, 0.2);
+    margin-bottom: 2rem;
+}
+
+.plot-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.7;
+    color: #f2e2c5;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+}
+
+.continue-text {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: #b8a898;
+    opacity: 0;
+}
+
+/* ── Climax Section ── */
+.climax-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.climax-content {
+    text-align: center;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.climax-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #b8a898;
+    margin-bottom: 1rem;
+}
+
+.climax-reveal {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: clamp(4.2rem, 6vw, 7rem);
+    color: #d4a853;
+    letter-spacing: 0.05em;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    opacity: 0;
+}
+
+.climax-footer {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: rgba(212, 168, 83, 0.45);
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ── About Section ── */
+.about-section {
+    position: relative;
+    width: 100%;
+    height: 250vh;
+    background-color: #04060e;
+    z-index: 40;
+}
+
+.moving-darkness {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(4, 6, 14, 0.5) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.about-content {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2;
+}
+
+.about-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.4em;
+    color: #d4a853;
+    margin-bottom: 2rem;
+}
+
+.about-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 4.5rem;
+    color: #d4a853;
+    margin-bottom: 3rem;
+}
+
+.about-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 1.9;
+    color: #b8a898;
+    margin: 0 auto 4rem auto;
+    max-width: 720px;
+}
+
+.about-footer {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.65rem;
+    color: #d4a853;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+}
+
+.thin-gold-line {
+    width: 40px;
+    height: 1px;
+    background-color: rgba(212, 168, 83, 0.45);
+}
+
+/* ================================================================
+   RESPONSIVE & PERFORMANCE SCALING
+   ================================================================ */
+
+/* Ultra-Wide Monitors (1800px+) */
+@media (min-width: 1800px) {
+    .hero-brand-logos {
+        max-width: 1600px;
+        margin-top: clamp(200px, 18vh, 250px);
+    }
+    .hero-title .line-1 { font-size: 8.5rem; }
+    .hero-title .line-2 { font-size: 7.8rem; }
+    .hero-title .year-text { font-size: 3.5rem; }
+    .climax-reveal { font-size: clamp(6.5rem, 7.5vw, 8.5rem); }
+}
+
+/* Small Laptops / Short Viewports */
+@media (max-width: 1200px) and (max-height: 800px) {
+    .hero-brand-logos { margin-top: clamp(100px, 12vh, 140px); }
+    .hero-title { margin-bottom: 1.5rem; }
+    .hero-title .line-1 { font-size: clamp(3rem, 7vw, 6rem); margin: 0; }
+    .hero-title .line-2 { font-size: clamp(2.8rem, 6.5vw, 5.5rem); margin: 0; }
+    .hero-logo-img { height: clamp(60px, 10vw, 100px); }
+    .hero-logo-img.iem-logo { height: clamp(70px, 11vw, 110px); }
+    .hero-summit-logo { height: clamp(80px, 7vh, 85px); }
+}
+
+/* Tablets (992px) */
+@media (max-width: 992px) {
+    .hero-title .line-1,
+    .hero-title .line-2 { font-size: clamp(2.5rem, 7vw, 5rem); }
+    .climax-reveal { font-size: 5rem; }
+    .about-title { font-size: 3.5rem; }
+    .plot-section { left: 4vw; max-width: 480px; padding: 24px; }
+    .plot-text { font-size: 1.6rem; }
+}
+
+/* Large Mobile (768px) */
+@media (max-width: 768px) {
+    .hero-title .line-1 { font-size: clamp(2.2rem, 10vw, 3.2rem); }
+    .hero-title .line-2 { font-size: clamp(2rem, 9vw, 2.8rem); }
+    .hero-title .year-text { font-size: 1.4rem; }
+
+    .hero-brand-logos {
+        gap: 16px;
+        padding: 0 16px;
+        margin-top: clamp(90px, 12vh, 140px);
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-brand-title { font-size: 0.62rem; letter-spacing: 0.15em; }
+    .hero-logo-img { height: clamp(45px, 12vw, 65px); }
+    .hero-logo-img.iem-logo { height: clamp(55px, 13vw, 75px); }
+    .hero-summit-logo { height: 60px; margin-bottom: 0.5rem; }
+    
+    .hero-event-date { font-size: 1.05rem; margin-top: 0.75rem; }
+    .hero-venue { font-size: 0.75rem; margin-top: 1rem; padding: 0 20px; }
+    .hero-actions { flex-direction: column; gap: 16px; margin-bottom: 0; }
+    .btn-solid, .btn-outline-gold { padding: 14px 28px; width: 100%; max-width: 300px; margin: 0 auto; }
+
+    .scroll-indicator { margin-top: 24px; }
+
+    .plot-section { left: 20px; bottom: 5vh; max-width: calc(100% - 40px); padding: 20px; }
+    .plot-text { font-size: 1.3rem; }
+
+    .climax-intro { font-size: 1.5rem; }
+    .climax-reveal { font-size: clamp(2.4rem, 6.5vw, 3rem); letter-spacing: 0.03em; }
+
+    .about-title { font-size: 2.5rem; }
+    .about-text { font-size: 1.3rem; }
+    .about-footer { font-size: 1.1rem; }
+}
+
+/* Mobile Landscape & Extreme Short aspect ratios */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-brand-logos { margin-top: 80px; gap: 16px; }
+    .hero-logo-img { height: 40px; }
+    .hero-logo-img.iem-logo { height: 45px; }
+    .hero-summit-logo { height: 45px; margin: 0 auto; }
+    .hero-title .line-1 { font-size: 2.5rem; }
+    .hero-title .line-2 { font-size: 2.2rem; }
+    .hero-title .line-3 { margin-top: 0.5rem; }
+    .hero-title .year-text { font-size: 1.2rem; }
+    .hero-event-date { font-size: 0.9rem; margin-top: 0.5rem; }
+    .hero-actions { flex-direction: row; gap: 12px; margin-bottom: 0; }
+    .btn-solid, .btn-outline-gold { padding: 8px 16px; font-size: 0.8rem; }
+    .scroll-indicator { display: none; /* hide to save vertical space */ }
+    .hero-venue { margin-top: 0.5rem; font-size: 0.7rem; }
+}
+
+/* Small Mobile (480px) */
+@media (max-width: 480px) {
+    .hero-title .line-1 { font-size: clamp(1.8rem, 9vw, 2.2rem); }
+    .hero-title .line-2 { font-size: clamp(1.6rem, 8vw, 2rem); }
+    .hero-brand-title { display: none; /* Often too cramped on very small screens, let's just let logos breathe or scale it down */ }
+    .hero-venue { font-size: 0.65rem; }
+    .climax-reveal {
+        font-size: clamp(1.7rem, 8vw, 2.3rem);
+        letter-spacing: 0.01em;
+        line-height: 1.2;
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+    }
+}

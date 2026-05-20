@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BENGAL E-SUMMIT 2026 — THE BLACKOUT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Noto+Serif:wght@400;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#3a2f15",
+              "on-error-container": "#ffdad6",
+              "error": "#ffb4ab",
+              "on-background": "#e0e2ef",
+              "outline": "#9b8f7e",
+              "tertiary": "#dbc8a4",
+              "on-primary-fixed": "#271900",
+              "secondary-fixed-dim": "#ffb3ac",
+              "surface-container-low": "#181b25",
+              "tertiary-fixed-dim": "#d7c5a0",
+              "on-tertiary-fixed-variant": "#52452a",
+              "surface-container-high": "#272a33",
+              "on-surface-variant": "#d2c5b2",
+              "primary": "#f2c36b",
+              "surface-container": "#1d1f29",
+              "on-primary": "#412d00",
+              "on-secondary-fixed": "#410003",
+              "surface-variant": "#32343e",
+              "on-primary-container": "#573d00",
+              "primary-fixed-dim": "#eec068",
+              "on-tertiary-container": "#4d4125",
+              "secondary-container": "#8e1c1c",
+              "surface": "#10131c",
+              "on-primary-fixed-variant": "#5d4200",
+              "outline-variant": "#4e4637",
+              "inverse-surface": "#e0e2ef",
+              "surface-bright": "#363943",
+              "on-secondary": "#680007",
+              "inverse-on-surface": "#2d303a",
+              "secondary": "#ffb3ac",
+              "surface-container-highest": "#32343e",
+              "tertiary-fixed": "#f4e0bb",
+              "secondary-fixed": "#ffdad6",
+              "surface-container-lowest": "#0b0e17",
+              "on-tertiary-fixed": "#241a04",
+              "on-secondary-fixed-variant": "#8a1a1a",
+              "background": "#04060e",
+              "on-surface": "#e0e2ef",
+              "on-secondary-container": "#ff9e96",
+              "primary-fixed": "#ffdea6",
+              "inverse-primary": "#7b5804",
+              "on-error": "#690005",
+              "surface-dim": "#10131c",
+              "primary-container": "#d4a853",
+              "surface-tint": "#eec068",
+              "tertiary-container": "#bead8a",
+              "error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Cinzel"],
+              "body": ["Cormorant Garamond"],
+              "label": ["Noto Serif"],
+              "cinzel": ["Cinzel"],
+              "cormorant": ["Cormorant Garamond"]
+            },
+            borderRadius: {"DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .film-grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        .ember-glow {
+            background: radial-gradient(circle, rgba(139, 26, 26, 0.08) 0%, rgba(212, 168, 83, 0.03) 40%, rgba(4, 6, 14, 0) 70%);
+        }
+    </style>
+</head>
+<body class="bg-[#04060e] text-on-surface selection:bg-primary/30 selection:text-primary overflow-hidden h-screen w-screen flex flex-col justify-center items-center">
+<!-- Film Grain Overlay -->
+<div class="film-grain"></div>
+<!-- Progress Line (Top Edge) -->
+<div class="fixed top-0 left-0 w-full h-[2px] bg-surface-container-lowest z-50">
+<div class="h-full w-full bg-gradient-to-r from-on-secondary-fixed-variant via-primary-container to-primary"></div>
+</div>
+<!-- Main Content Canvas -->
+<main class="relative z-10 flex flex-col items-center justify-center text-center px-6 w-full max-w-4xl">
+<!-- Dying Ember Glow Effect -->
+<div class="absolute inset-0 ember-glow -z-10 blur-3xl scale-150"></div>
+<!-- Section 1 End Content -->
+<div class="space-y-6 md:space-y-8 flex flex-col items-center">
+<!-- Small Prophecy Text (Kept as is) -->
+<p class="font-cinzel text-[10px] md:text-xs tracking-[0.4em] text-primary/60 uppercase">
+                THE PROPHECY BEGINS
+            </p>
+<!-- New Center Content -->
+<div class="flex flex-col items-center space-y-6">
+<!-- Headline -->
+<h1 class="font-cinzel font-[900] text-4xl md:text-6xl lg:text-7xl text-[#d4a853] tracking-tighter uppercase leading-tight">
+        BENGAL E-SUMMIT 2026
+    </h1>
+<!-- Body Text Paragraph -->
+<p class="font-cormorant italic text-[1.1rem] leading-[1.8] text-[rgba(232,213,176,0.65)] max-w-[600px] text-center font-normal">
+        The edition of Bengal E-Summit — Kalki 2898 AD — Asia's largest student business conclave from Eastern India — is poised to make history, igniting groundbreaking ideas and visionary solutions. This year, we invite those who dare to rebuild civilizations, to step into E-Summit, where ancient wisdom meets future disruption, and founders light the path forward. Join us as we set bold new standards for innovation, leadership, and purposeful change.
+    </p>
+<!-- Footer Hint -->
+<p class="font-cinzel font-normal text-[9px] tracking-[0.3em] text-[rgba(212,168,83,0.5)] mt-[1.5rem] uppercase">
+        Dates to be announced soon.
+    </p>
+</div>
+<!-- Institution Text (Kept as is) -->
+<div class="flex flex-col items-center gap-4 mt-8">
+<div class="h-px w-12 bg-primary/20"></div>
+<p class="font-cormorant italic text-lg md:text-2xl text-on-surface-variant/80 tracking-wide">
+                    Institute of Engineering &amp; Management · Kolkata
+                </p>
+<div class="h-px w-12 bg-primary/20"></div>
+</div>
+</div>
+</main>
+<!-- Footer / Bottom Hint -->
+<div class="fixed bottom-0 left-0 w-full py-12 flex flex-col items-center gap-6 z-10">
+<!-- Navigation Shell Suppressed as per instructions for Transactional/Linear Screens -->
+<!-- Next Section Hint Line -->
+<div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-primary/10 to-transparent"></div>
+<!-- Minimal Copyright (Footer Component Guidance Applied) -->
+<div class="w-full flex flex-col items-center px-8">
+<p class="font-cormorant italic tracking-wider text-[10px] text-on-surface-variant/40 uppercase">
+                © 2026 BENGAL E-SUMMIT. AN ANCIENT FUTURE.
+            </p>
+</div>
+</div>
+<!-- Decorative Corner Elements -->
+<div class="fixed top-12 left-12 w-8 h-8 border-t border-l border-primary/5 hidden md:block"></div>
+<div class="fixed top-12 right-12 w-8 h-8 border-t border-r border-primary/5 hidden md:block"></div>
+<div class="fixed bottom-12 left-12 w-8 h-8 border-b border-l border-primary/5 hidden md:block"></div>
+<div class="fixed bottom-12 right-12 w-8 h-8 border-b border-r border-primary/5 hidden md:block"></div>
+<!-- Hidden Image Data for Accessibility/Theming -->
+<div class="hidden" data-alt="Dark cinematic void with faint ember dust particles and golden light rays"></div>
+</body></html>

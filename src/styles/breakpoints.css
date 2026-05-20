@@ -1,0 +1,50 @@
+/* =====================================================
+   BREAKPOINTS.CSS — Bengal E-Summit 2026
+   Professional Breakpoint Structure
+   ===================================================== */
+
+/* 
+  Usage Note:
+  Use these standard breakpoints in your media queries across the application.
+  
+  Ultra-wide: @media (min-width: 1800px)
+  Desktop: @media (max-width: 1440px)
+  Laptop: @media (max-width: 1200px)
+  Tablet: @media (max-width: 992px)
+  Large Mobile: @media (max-width: 768px)
+  Small Mobile: @media (max-width: 480px)
+*/
+
+:root {
+  /* Fluid Scaling System - Foundation */
+  /* Screen width baseline for scaling */
+  --vw-baseline: 100vw;
+  
+  /* Fluid Spacing Scale (using clamp to prevent extreme scaling) */
+  --spacing-3xs: clamp(0.125rem, 0.5vw, 0.25rem);
+  --spacing-2xs: clamp(0.25rem, 1vw, 0.5rem);
+  --spacing-xs: clamp(0.5rem, 1.5vw, 0.75rem);
+  --spacing-sm: clamp(0.75rem, 2vw, 1rem);
+  --spacing-md: clamp(1rem, 3vw, 1.5rem);
+  --spacing-lg: clamp(1.5rem, 4vw, 2rem);
+  --spacing-xl: clamp(2rem, 5vw, 3rem);
+  --spacing-2xl: clamp(3rem, 7vw, 4.5rem);
+  --spacing-3xl: clamp(4rem, 10vw, 6rem);
+  --spacing-4xl: clamp(5rem, 12vw, 8rem);
+  
+  /* Fluid Gap Scale */
+  --gap-xs: var(--spacing-xs);
+  --gap-sm: var(--spacing-sm);
+  --gap-md: var(--spacing-md);
+  --gap-lg: var(--spacing-lg);
+  --gap-xl: var(--spacing-xl);
+  
+  /* Logo Scaling System */
+  --logo-scale-sm: clamp(40px, 6vw, 60px);
+  --logo-scale-md: clamp(60px, 8vw, 90px);
+  --logo-scale-lg: clamp(90px, 12vw, 140px);
+  
+  /* Button Scaling */
+  --btn-padding-y: clamp(0.5rem, 1.5vw, 0.8rem);
+  --btn-padding-x: clamp(1.2rem, 3vw, 2rem);
+}

@@ -1,0 +1,86 @@
+/* =====================================================
+   RESPONSIVE.CSS — Bengal E-Summit 2026
+   Global Responsive Foundation
+   ===================================================== */
+
+/* Base Layout Adaptations */
+
+/* Container constraints for ultra-wide */
+@media (min-width: 1800px) {
+  :root {
+    --max-width: 1600px;
+  }
+}
+
+/* Base adjustments for smaller screens */
+@media (max-width: 1440px) {
+  :root {
+    --navbar-height: 75px;
+  }
+}
+
+@media (max-width: 1200px) {
+  /* Laptop adjustments */
+  :root {
+    --navbar-height: 70px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Tablet adjustments */
+  html {
+    font-size: 15px; /* Slight base scale down */
+  }
+  
+  :root {
+    --navbar-height: 65px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Large Mobile adjustments */
+  html {
+    font-size: 14px;
+  }
+  
+  :root {
+    --navbar-height: 60px;
+  }
+  
+  /* Adjust custom scrollbar for touch devices */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Small Mobile adjustments */
+  html {
+    font-size: 13px; /* Ensure text doesn't overflow */
+  }
+  
+  :root {
+    --navbar-height: 55px;
+  }
+}
+
+/* Global utility classes for responsive hide/show */
+.hide-on-mobile {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+.show-on-mobile {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .show-on-mobile {
+    display: block !important;
+  }
+}

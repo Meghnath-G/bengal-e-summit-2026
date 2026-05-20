@@ -1,0 +1,92 @@
+/* =====================================================
+   GLOBALS.CSS — Bengal E-Summit 2026
+   Master stylesheet entry point
+   ===================================================== */
+
+@import './variables.css';
+@import './breakpoints.css';
+@import './typography.css';
+@import './animations.css';
+@import './responsive.css';
+@import './performance.css';
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Cinematic Scrollbar — works with Lenis and matches gold branding */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #04060e;
+  border-left: 1px solid rgba(212, 168, 83, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgba(212, 168, 83, 0.15), rgba(212, 168, 83, 0.35), rgba(212, 168, 83, 0.15));
+  border-radius: 4px;
+  border: 1px solid #04060e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 168, 83, 0.55);
+  box-shadow: 0 0 10px rgba(212, 168, 83, 0.3);
+}
+
+/* Selection style */
+::selection {
+  background: rgba(var(--color-gold-rgb), 0.25);
+  color: var(--text-primary);
+}
+
+/* Root layout container */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+}
+
+/* Generic page section padding */
+section {
+  position: relative;
+  width: 100%;
+}
+
+/* Image defaults */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Focus ring for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 4px;
+}

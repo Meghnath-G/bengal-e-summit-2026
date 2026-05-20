@@ -1,0 +1,109 @@
+/* ==========================================================================
+   STATISTICS SHOWCASE SECTION - Exact preservation from style.css
+   ========================================================================== */
+.statistics-showcase {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: transparent; /* Keep it cinematic, matching previous sections */
+    padding: 10vh 5vw;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.stats-container {
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+}
+
+/* Left Side - 3D Model */
+.stats-model-container {
+    flex: 1;
+    height: 70vh;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Subtle glow behind the 3D model */
+    filter: drop-shadow(0 0 50px rgba(235, 209, 151, 0.15));
+}
+
+.stats-model-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+    outline: none;
+    pointer-events: auto;
+}
+
+/* Right Side - Stats Content */
+.stats-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem; /* Large cinematic whitespace */
+    padding-left: 4vw;
+}
+
+.stat-block {
+    opacity: 0;
+    transform: translateY(40px); /* For smooth GSAP fade-in */
+}
+
+.stat-number {
+    font-family: var(--font-heading); /* Cinzel */
+    font-size: clamp(4.5rem, 8vw, 7.5rem);
+    font-weight: 700;
+    color: #ebd197;
+    line-height: 1;
+    margin: 0 0 1rem 0;
+    text-shadow: 0 4px 20px rgba(235, 209, 151, 0.3); /* Subtle readability glow */
+}
+
+.stat-text {
+    font-family: var(--font-body); /* Cormorant Garamond */
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    color: rgba(235, 209, 151, 0.8);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .stats-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stats-model-container {
+        width: 100%;
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .stats-content {
+        padding-left: 0;
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .statistics-showcase {
+        padding: 5vh 5vw 10vh 5vw;
+    }
+    .stat-number {
+        font-size: clamp(3.5rem, 12vw, 4.5rem);
+    }
+    .stat-text {
+        font-size: 1.1rem;
+    }
+}

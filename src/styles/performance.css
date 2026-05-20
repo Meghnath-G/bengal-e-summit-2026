@@ -1,0 +1,52 @@
+/* =====================================================
+   PERFORMANCE.CSS — Bengal E-Summit 2026
+   GPU Compositing & Rendering Optimizations
+   ===================================================== */
+
+/* 
+  Will-change and transform isolation classes to optimize 
+  heavy cinematic animations, 3D canvases, and scroll sequences.
+*/
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.will-change-both {
+  will-change: transform, opacity;
+}
+
+/* Containment to prevent unnecessary layout recalculations */
+.contain-layout {
+  contain: layout;
+}
+
+.contain-paint {
+  contain: paint;
+}
+
+.contain-strict {
+  contain: strict;
+}
+
+/* Disable pointer events on overlays that don't need interaction to improve scroll performance */
+.no-pointer-events {
+  pointer-events: none;
+}
+
+/* High-performance blur (reduces edge artifacting and rendering cost) */
+.optimized-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateZ(0); /* force hardware acceleration on the blur */
+}

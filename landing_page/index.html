@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengal E-Summit 2026 | Kalki 2898 AD</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Film Grain Overlay -->
+    <div class="film-grain"></div>
+    <div class="vignette"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="nav-left">
+                <div class="brand-block"><img src="logos/iem.webp" alt="IEM"></div>
+                <div class="brand-block large-block"><img src="logos/esummit_f.jpg" alt="BENGAL E-SUMMIT 2026"></div>
+                <div class="brand-block"><img src="logos/uem.webp" alt="UEM"></div>
+            </div>
+
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-right" id="nav-right">
+                <a href="#home" class="nav-link active">HOME</a>
+                <a href="#events" class="nav-link">EVENTS</a>
+                <a href="#flashback" class="nav-link">FLASHBACK</a>
+                <a href="#partners" class="nav-link">PARTNERS</a>
+                <a href="#team" class="nav-link">TEAM</a>
+                <a href="#register" class="btn-register">REGISTER</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Scroll Container for the Video Sequence -->
+    <div class="scroll-sequence-container" id="scroll-sequence">
+        <!-- Canvas sticky wrapper -->
+        <div class="canvas-wrapper">
+            <canvas id="sequence-canvas"></canvas>
+            <div class="blackout-overlay" id="blackout-overlay"></div>
+        </div>
+
+        <!-- Section 1: Hero -->
+        <section class="hero-section" id="hero-section">
+            <div class="hero-readability-gradient"></div>
+            <div class="hero-content">
+                <div class="hero-brand-logos">
+                    <img src="logos/iem.webp" alt="IEM" class="hero-logo-img iem-logo">
+                    <span class="hero-brand-title">SCHOOL OF UNIVERSITY OF ENGINEERING AND MANAGEMENT</span>
+                    <img src="logos/uem.webp" alt="UEM" class="hero-logo-img">
+                </div>
+                <div class="hero-summit-symbol">
+                    <img src="logos/summit logo.png" alt="Summit Logo" class="hero-summit-logo">
+                </div>
+                <h1 class="hero-title">
+                    <span class="cinematic-text line-1">BENGAL</span>
+                    <span class="cinematic-text line-2">E-SUMMIT</span>
+                    <span class="line-3">
+                        <span class="decorative-line"></span>
+                        <span class="cinematic-text year-text">2026</span>
+                        <span class="decorative-line"></span>
+                    </span>
+                    <span class="cinematic-text hero-event-date">25th & 26th of July</span>
+                </h1>
+
+                <div class="hero-actions">
+                    <a href="#register" class="btn-solid">⚡ REGISTER NOW</a>
+                    <a href="#explore" class="btn-outline-gold">EXPLORE EVENTS</a>
+                </div>
+                <div class="hero-venue">
+                    Venue: Institute of Engineering and Management, Gurukul Building
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>SCROLL TO ENTER THE DYNAMICS</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- Section 2: Pre-Blackout Plot -->
+        <section class="plot-section" id="plot-section">
+            <div class="plot-content">
+                <div class="plot-tag">THE PROBLEM</div>
+                <div class="plot-divider"></div>
+                <p class="plot-text">
+                    2898 AD. The world’s greatest civilization lies in ruin.<br>
+                    Ancient temples. Iron scaffolding. A broken economy.
+                </p>
+            </div>
+            <div class="continue-text">CONTINUE THE JOURNEY ↓</div>
+        </section>
+
+        <!-- Section 3: Climax -->
+        <section class="climax-section" id="climax-section">
+            <div class="climax-content">
+                <p class="climax-intro line-1">Every civilization that fell…</p>
+                <p class="climax-intro line-2">was rebuilt by one thing.</p>
+                <h2 class="climax-reveal">AN ENTREPRENEUR</h2>
+                <div class="climax-footer">BENGAL E-SUMMIT 2026 · IEM KOLKATA</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Section 4: About Section (Normal Scroll after sequence) -->
+    <section class="about-section" id="about-section">
+        <div class="moving-darkness"></div>
+        <div class="about-content">
+            <div class="about-tag">THE PROPHECY BEGINS</div>
+            <h2 class="about-title">BENGAL E-SUMMIT 2026</h2>
+            <p class="about-text">
+                The edition of Bengal E-Summit — One of the largest student business conclave from Eastern
+                India — is poised to make history, igniting groundbreaking ideas and visionary solutions. This year, we
+                invite those who dare to renovate the economy, to step into E-Summit, where ancient wisdom meets future
+                disruption, and founders light the path forward.
+            </p>
+            <div class="about-footer">
+                <div class="thin-gold-line"></div>
+                Institute of Engineering & Management · Kolkata
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <div class="countdown-eyebrow">UNFOLDS IN</div>
+        <div class="countdown-tiles">
+            <div class="countdown-tile">
+                <div class="tile-track-wrapper">
+                    <div class="tile-track" id="days-track"></div>
+                </div>
+                <div class="tile-label">DAYS</div>
+            </div>
+            <div class="countdown-tile">
+                <div class="tile-track-wrapper">
+                    <div class="tile-track" id="hours-track"></div>
+                </div>
+                <div class="tile-label">HOURS</div>
+            </div>
+            <div class="countdown-tile">
+                <div class="tile-track-wrapper">
+                    <div class="tile-track" id="minutes-track"></div>
+                </div>
+                <div class="tile-label">MINUTES</div>
+            </div>
+            <div class="countdown-tile">
+                <div class="tile-track-wrapper">
+                    <div class="tile-track" id="seconds-track"></div>
+                </div>
+                <div class="tile-label">SECONDS</div>
+            </div>
+        </div>
+        <div class="countdown-date">MARCH 2026 · IEM KOLKATA · WEST BENGAL</div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section" id="story">
+
+        <!-- Fixed left sidebar -->
+        <div class="story-sidebar-left">
+            <div class="story-year">MMXXVI</div>
+            <div class="story-subtitle">THE DIGITAL<br>RELIC</div>
+            <div class="story-nav">
+                <div class="story-nav-item active" data-panel="0">
+                    <span class="nav-num">01</span>
+                    <span class="nav-dot"></span>
+                </div>
+                <div class="story-nav-item" data-panel="1">
+                    <span class="nav-num">02</span>
+                    <span class="nav-dot"></span>
+                </div>
+                <div class="story-nav-item" data-panel="2">
+                    <span class="nav-num">03</span>
+                    <span class="nav-dot"></span>
+                </div>
+            </div>
+            <div class="story-scroll-cue">
+                <span class="scroll-arrow">↓</span>
+                <span class="scroll-text">SCROLL</span>
+            </div>
+        </div>
+
+        <!-- Fixed right sidebar — vertical BENGAL E-SUMMIT text -->
+        <div class="story-sidebar-right">
+            <div class="story-vertical-text">BENGAL E-SUMMIT</div>
+        </div>
+
+        <!-- Sticky panel container -->
+        <div class="story-panels-container">
+
+            <!-- Panel 01 — KASHI BURNS -->
+            <div class="story-panel" id="panel-1">
+                <div class="panel-image-wrap">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsOgznEkGEJrNav8MJOxiuK-UZVM4vhP8WFLeTkPZ--15pNch5Rr9tdO6msZX4op6Xn08jX0nOwmV3gyEfNbaVIzxo7Zkt-lfwIrUbC42-YyQKqFSqBMEoxOFiwrj2eNVl6a-N-Sup4DxgyB6f2ydwypVyaDgl4dboYd7YrYSFvLHTCgTA_WXZ_Oh4er_py1O_BKl39pRjaEtqrQPfcN4ydLA1XVFrMmXXql-offEvd2o93qfPEfaYA2xLSUY9aPEYXzhxV0erlw=s4000"
+                        alt="Kashi Burns" class="panel-img" />
+                    <div class="panel-overlay"></div>
+                    <div class="panel-counter">01 <span class="counter-slash">/</span> <span
+                            class="counter-total">03</span></div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-act">
+                        <span>ACT I — THE PROBLEM</span>
+                    </div>
+                    <h2 class="panel-title">
+                        <span>KASHI</span>
+                        <span class="title-red">BURNS</span>
+                    </h2>
+                    <div class="panel-divider"></div>
+                    <p class="panel-body">
+                        In the year 2026, the eternal city flickers against the encroaching void. A digital drought has
+                        parched the spirit of the delta, leaving the relics of our heritage to crumble into the
+                        data-drifts of time.
+                    </p>
+                    <div class="panel-cta">
+                        SCROLL TO CONTINUE <span class="cta-arrow">↓</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 02 — THE CHAKRA IGNITES -->
+            <div class="story-panel" id="panel-2">
+                <div class="panel-image-wrap">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtvdiR09ez-kWy9dF6OxkAHGn_X25miuy5N90ELZcD0r-wCOlbuQcEbDWQ5COIZm0vpopXmCF0UvROduhOmWutxJH2h9t6_D92A1xw_w8FdPKtQ8dtU9aOfVL0dL5MYvWBBQUF5Ykh5uW0uqqOMg__PSMBWLF1mZ8R8M8AB7ktdDhcMZ22CfNv8X6uMd2gsWCGKO0yIvxyVM_0zg4yKAEmhAs4YgWl0c7vDvp42pM3DL6XYvhDsx1agCOFCN1J2dr_VUN-N4C39w=s4000"
+                        alt="The Chakra Ignites" class="panel-img" />
+                    <div class="panel-overlay"></div>
+                    <div class="panel-counter">02 <span class="counter-slash">/</span> <span
+                            class="counter-total">03</span></div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-act">
+                        <span>ACT II — THE AWAKENING</span>
+                    </div>
+                    <h2 class="panel-title">
+                        <span>THE</span>
+                        <span>CHAKRA</span>
+                        <span class="title-gold">IGNITES</span>
+                    </h2>
+                    <div class="panel-divider"></div>
+                    <p class="panel-body">
+                        Deep within the ruins of the New-Bengal core, the ancient mechanisms stir. A resonance not felt
+                        for centuries begins to vibrate, bridging the void between ancestral wisdom and the digital
+                        future.
+                    </p>
+                    <div class="panel-cta">
+                        SCROLL TO CONTINUE <span class="cta-arrow">↓</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 03 — THE PORTAL OPENS -->
+            <div class="story-panel" id="panel-3">
+                <div class="panel-image-wrap">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPpWXnbSm90qrIwTzN_xioFcUAXeLMPFsGdnPEZ--n1h6IBAIwzhBh_0thot9b88GkMz9uFgiGk8xJRWyIXNkTyq2HNvh9e_17LzIXlorU3jrV5SA2SlyggVNSr1Tyl8I5wIUUtQrJhbLk29rjyTeQYY4eFr0-8nE0S21u9Fsgug_r1sY_uOCaf57eUM_lHicvR7xHbROqPeslD1Z2pRJL8TKHAa4t-QvRB9TLdSs4NZn5TaVWg8coSurK_1s4wj-5euvY4PuUrQ=s4000"
+                        alt="The Portal Opens" class="panel-img" />
+                    <div class="panel-overlay"></div>
+                    <div class="panel-counter">03 <span class="counter-slash">/</span> <span
+                            class="counter-total">03</span></div>
+                </div>
+                <div class="panel-card">
+                    <div class="panel-act">
+                        <span>ACT III — THE NEW WORLD</span>
+                    </div>
+                    <h2 class="panel-title">
+                        <span>THE</span>
+                        <span>PORTAL</span>
+                        <span class="title-gold">OPENS</span>
+                    </h2>
+                    <div class="panel-divider"></div>
+                    <p class="panel-body">
+                        Where the sacred waters of the past meet the silicon streams of tomorrow. Step through the
+                        threshold of heritage into the architected infinite of Neo-Bharat.
+                    </p>
+                    <div class="panel-cta">
+                        <span class="act-line"></span>
+                        THE STORY CONTINUES
+                    </div>
+                    <div class="panel-next-btn">→</div>
+                </div>
+            </div>
+
+        </div><!-- end story-panels-container -->
+
+    </section>
+    <!---->
+    <section class="flashback-section">
+        <header class="section-header">
+            <p class="eyebrow">Glimpses of the Void</p>
+            <h1 class="giant-heading">FLASHBACK</h1>
+            <div class="heading-glow"></div>
+        </header>
+
+        <div class="carousel-container">
+            <div class="carousel-mask">
+                <div class="carousel-row row-1" data-direction="left">
+                    <div class="carousel-track">
+                        <!-- Populated by main.js -->
+                    </div>
+                </div>
+
+                <div class="carousel-row row-2" data-direction="right">
+                    <div class="carousel-track">
+                        <!-- Populated by main.js -->
+                    </div>
+                </div>
+
+                <div class="carousel-row row-3" data-direction="left">
+                    <div class="carousel-track">
+                        <!-- Populated by main.js -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="floating-video-container">
+                <div class="video-wrapper">
+                    <video src="videos/for carousel/video.mp4" autoplay muted loop playsinline></video>
+                    <button class="play-pause-btn" aria-label="Play/Pause">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M5 3l14 9-14 9V3z" stroke-linejoin="round" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Statistics Showcase with 3D Model -->
+    <section class="statistics-showcase" id="statistics-showcase">
+        <div class="stats-container">
+            <!-- Left Side: 3D Model -->
+            <div class="stats-model-container" id="chakra-container">
+                <!-- Three.js canvas will be injected here -->
+            </div>
+            
+            <!-- Right Side: Stats Blocks -->
+            <div class="stats-content">
+                <div class="stat-block">
+                    <h3 class="stat-number">50K+</h3>
+                    <p class="stat-text">Global Participants</p>
+                </div>
+                <div class="stat-block">
+                    <h3 class="stat-number">100+</h3>
+                    <p class="stat-text">Industry Leaders</p>
+                </div>
+                <div class="stat-block">
+                    <h3 class="stat-number">20+</h3>
+                    <p class="stat-text">Mega Events</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

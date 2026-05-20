@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=Cormorant+Garamond:ital,wght@1,400;1,500;1,700&amp;family=Noto+Serif:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#dbc8a4",
+                        "inverse-primary": "#7b5804",
+                        "on-surface": "#e0e2ef",
+                        "primary-fixed-dim": "#eec068",
+                        "on-tertiary-fixed": "#241a04",
+                        "on-secondary": "#680007",
+                        "on-tertiary": "#3a2f15",
+                        "surface-container-high": "#272a33",
+                        "on-primary": "#412d00",
+                        "tertiary-fixed": "#f4e0bb",
+                        "surface-bright": "#363943",
+                        "on-background": "#e0e2ef",
+                        "secondary-fixed-dim": "#ffb3ac",
+                        "on-secondary-container": "#ff9e96",
+                        "on-tertiary-fixed-variant": "#52452a",
+                        "tertiary-fixed-dim": "#d7c5a0",
+                        "surface-container-low": "#181b25",
+                        "surface-container-lowest": "#0b0e17",
+                        "inverse-on-surface": "#2d303a",
+                        "secondary": "#ffb3ac",
+                        "on-tertiary-container": "#4d4125",
+                        "surface": "#10131c",
+                        "secondary-container": "#8e1c1c",
+                        "on-primary-fixed-variant": "#5d4200",
+                        "error": "#ffb4ab",
+                        "primary-container": "#d4a853",
+                        "outline-variant": "#4e4637",
+                        "on-surface-variant": "#d2c5b2",
+                        "surface-dim": "#10131c",
+                        "surface-container-highest": "#32343e",
+                        "inverse-surface": "#e0e2ef",
+                        "on-primary-fixed": "#271900",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#8a1a1a",
+                        "error-container": "#93000a",
+                        "background": "#04060e",
+                        "secondary-fixed": "#ffdad6",
+                        "on-secondary-fixed": "#410003",
+                        "primary-fixed": "#ffdea6",
+                        "outline": "#9b8f7e",
+                        "tertiary-container": "#bead8a",
+                        "primary": "#f2c36b",
+                        "surface-tint": "#eec068",
+                        "on-error": "#690005",
+                        "surface-container": "#1d1f29",
+                        "surface-variant": "#32343e",
+                        "on-primary-container": "#573d00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Cinzel"],
+                        "body": ["Cormorant Garamond"],
+                        "label": ["Noto Serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .film-grain {
+            display: none !important;
+        }
+        .cinematic-glow {
+            box-shadow: 0 0 40px rgba(212, 168, 83, 0.08);
+        }
+        .speaker-card:hover .overlay {
+            transform: translateY(0);
+        }
+        .hero-vignette {
+            box-shadow: inset 0 0 150px 80px #04060e;
+        }
+    </style>
+</head>
+<body class="bg-[#04060e] text-on-surface-variant font-body antialiased">
+<div class="film-grain"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full rounded-none bg-[#10131c]/80 backdrop-blur-xl flex justify-between items-center px-12 py-6 w-full z-50">
+<div class="text-2xl font-bold text-[#f2c36b] tracking-[0.2em] font-['Cinzel'] uppercase">BENGAL E-SUMMIT</div>
+<div class="hidden md:flex space-x-12 font-['Cinzel'] tracking-[0.1em] uppercase text-sm"><a class="text-[#d2c5b2] opacity-80 hover:text-[#f2c36b] transition-colors duration-300" href="#">HOME</a>
+<a class="text-[#d2c5b2] opacity-80 hover:text-[#f2c36b] transition-colors duration-300" href="#">EVENTS</a>
+<a class="text-[#d2c5b2] opacity-80 hover:text-[#f2c36b] transition-colors duration-300" href="#">FLASHBACK</a>
+<a class="text-[#d2c5b2] opacity-80 hover:text-[#f2c36b] transition-colors duration-300" href="#">PARTNERS</a>
+<a class="text-[#d2c5b2] opacity-80 hover:text-[#f2c36b] transition-colors duration-300" href="#">TEAM</a></div>
+<button class="bg-[#d4a853] text-[#412d00] px-8 py-3 text-xs tracking-widest font-['Cinzel'] font-bold hover:bg-[#f2c36b] transition-all duration-300">
+            REGISTER
+        </button>
+</nav>
+<main>
+<!-- SECTION 1: HERO -->
+<section class="relative min-h-[55vh] flex flex-col items-center justify-center text-center px-12 pt-32 pb-12" style="background-image: linear-gradient(to bottom, rgba(4,6,14,0.55), rgba(4,6,14,0.85)), url('https://lh3.googleusercontent.com/aida/ADBb0uhd8jvlN97ou_lTIoOrzQ8hus01DtobF2iGVZgSuYVI-j1uMBXQIdPZjX5sFlIVd7DQMo8AnUJOw578PQ2uHPD8SN5Jt_7XMOilEeKMDTNFt_QlBANHXlamW-ZFWsWDBddY5326pyCSUI5Uu1oUIJ_c5ipf0HeJM-UAzymu6IQEeoLP9y_x84bsJ4O3IwbYuM9_SKUhST-Qw_J3SBP2ouLi6JYDHhJOZ8ZCMuYgvRpNQs_337YuQYRK_3-u-6EyXhTnYt6H4i7K'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<div class="absolute inset-0 hero-vignette pointer-events-none"></div>
+<div class="relative z-10 max-w-6xl mx-auto">
+<span class="font-headline font-normal tracking-[0.4em] text-primary text-sm mb-8 opacity-80 block">BENGAL E-SUMMIT 2026</span>
+<h1 class="font-headline font-black text-6xl md:text-8xl lg:text-9xl tracking-tighter leading-none mb-6"><span class="text-[#d4a853]">SPEAKERS &amp;</span><br/>
+<span class="text-[#e8d5b0]">PARTNERS</span></h1>
+<p class="font-body italic text-2xl md:text-3xl text-on-surface-variant/70 max-w-2xl mx-auto leading-relaxed mt-8">
+                The visionaries who shape the future and the forces that make it possible.
+            </p>
+</div>
+</section>
+<!-- SECTION 2: SPEAKERS GRID -->
+<section class="px-12 pt-12 pb-16 bg-surface-container-lowest">
+<div class="mb-16 border-l-4 border-on-secondary-fixed-variant pl-6">
+<h2 class="font-headline text-3xl tracking-[0.2em] text-[#e8d5b0] uppercase">THE SPEAKERS</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-0">
+<!-- Row 1 -->
+<div class="speaker-card relative aspect-[200/280] overflow-hidden group">
+<img alt="moody grayscale studio portrait of a visionary male tech leader" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV5gQRaeMdND66HJgD-EgNVwUIkXg4ZE7dFWkz24VXboYs75F-pyNWRDkX4Op0I-J2HALFH08QQGsxIoJABHUHbSX8ONxAFusgZOZKAhMi-kAnoyVeC9fTfHk6KkBWxAyLHBCs0LHf60Wyp7L5EvCoy7D6T2sYXIIZqB1gowS-CGj3WXVRsyI4Ws96YVLVa3qxpQH2ulGAjrtjeWYaoGrV83s5AZHXzVwsPNopEn7qWqS-HFtbO8BWODgDTRq6ZAtR-GBJ-cuURw"/>
+<div class="overlay absolute bottom-0 left-0 w-full p-6 translate-y-full transition-transform duration-500 bg-[#10131c]/60 backdrop-blur-xl">
+<h3 class="font-headline font-bold text-lg text-[#f2c36b]">Aravind Swamy</h3>
+<p class="font-body italic text-[#d2c5b2]">Chief Architect</p>
+</div>
+</div>
+<div class="speaker-card relative aspect-[200/280] overflow-hidden group">
+<img alt="intense high-contrast black and white portrait of an influential female entrepreneur" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-jsF4JajL9hYNx4zTgxsKtNwqqIvvNr2I5oZzY8Y1jJEVy2Af0bAVUf6biXYp7SXg4P9U0IFFFhHUXQn10DAflA8muCH6q43ulJ5kicQllpmhVOGlBWLRHK1Ea7Q6YyAEBTHCfnZYrpA8Zcnmgg94N7aY8WIkTQdIxdc6TzsUPNhLmOeIbx1SDMr0cwKbNX8bejTHihAkYHSU_yBgEYMaZ9O0QmdWKliRjry0CogTC8U09BdIMuqeSQxC-ZSFGQFIEZS9H7bAJA"/>
+<div class="overlay absolute bottom-0 left-0 w-full p-6 translate-y-full transition-transform duration-500 bg-[#10131c]/60 backdrop-blur-xl">
+<h3 class="font-headline font-bold text-lg text-[#f2c36b]">Dr. Elena Vance</h3>
+<p class="font-body italic text-[#d2c5b2]">AI Ethicist</p>
+</div>
+</div>
+<div class="speaker-card relative aspect-[200/280] overflow-hidden group">
+<img alt="rugged portrait of a global venture capitalist" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDod-WqE3DjkuW7JyIu-EGedleU7XRavJ9D114LDvBTsZbcrUbcwth9wjdC_UMI4UEgWUQxns5cl63Ey1JkhisKIzTU6uzT3NFNiwPoE_aIJUowv6GRpMPk1rbEFNI1jkouuLC8tRCO75NMQCqLvvDBpTA-egxcypMFtBLDojlhxecBS52bH6bYHu-J9nvH1X3MPNW_uBWpMBcZCCgf0FrCXSiaUjIgfagtxjPmUhFSmTiUPSfe8wDZehS2fpfLWpCPsySE8CsEnw"/>
+<div class="overlay absolute bottom-0 left-0 w-full p-6 translate-y-full transition-transform duration-500 bg-[#10131c]/60 backdrop-blur-xl">
+<h3 class="font-headline font-bold text-lg text-[#f2c36b]">Vikram Goenka</h3>
+<p class="font-body italic text-[#d2c5b2]">Managing Director</p>
+</div>
+</div>
+<div class="speaker-card relative aspect-[200/280] overflow-hidden group">
+<img alt="professional editorial portrait of a woman in leadership" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOhcoQEXMRnyJfU_b9r0j9PwDk0kGO8G-IGO4G6lG9osOpV8KZrw13isDKtg5RREb4OWgWY77P2Ha87eJhDoWopqA2wAq06jl-BVaps97aP5l7Rk_DxiO40ybD5F3GgALSmACdFHcrmPExUH6aIfeZzl9XqJ87vWEIfASuEHn8vADIw9jmNhAVbzX3lntVxUB40e8in5iPHGsJ-oXkmf2VhZurH4vlwlKFWgWC2Z8g5HgOrRAdqx3sWjRnlZIOgO9sFtkvNY-mcQ"/>
+<div class="overlay absolute bottom-0 left-0 w-full p-6 translate-y-full transition-transform duration-500 bg-[#10131c]/60 backdrop-blur-xl">
+<h3 class="font-headline font-bold text-lg text-[#f2c36b]">Sarah Jenkins</h3>
+<p class="font-body italic text-[#d2c5b2]">Sustainability Director</p>
+</div>
+</div>
+<div class="speaker-card relative aspect-[200/280] overflow-hidden group">
+<img alt="dramatic headshot of a creative technologist" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7DR41MitQWfof2REl9U2EYDgCu9TZYarsHlkzQuYejyiPZnRRix-wpTavhxMVbjvUmKXyoS6-CbRl3ifN5mtXv3M9WrMmWOw7HcvzCDvehmzQfNH3cwiBrFDm74JpjS3-4sWiBwnD9tH-dpidO-BIQiY3d8d_q-xnkKCDFPHqLdscwjg24IPmS6WQSlj1mo3SdWD804QIk2oimmeXKwLgQifrv3vD0R6PctNdmL9-RaMeOb9y0IQw7u2DiVoIIkP4lhBserAodQ"/>
+<div class="overlay absolute bottom-0 left-0 w-full p-6 translate-y-full transition-transform duration-500 bg-[#10131c]/60 backdrop-blur-xl">
+<h3 class="font-headline font-bold text-lg text-[#f2c36b]">Marcus Thorne</h3>
+<p class="font-body italic text-[#d2c5b2]">Founder, Obsidian Labs</p>
+</div>
+</div>
+<div class="speaker-card relative aspect-[200/280] overflow-hidden group">
+<img alt="striking high-fashion editorial portrait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-B7w8PXZamohgafR25BpZ8nICvLvy35FwxGLoNGX4QjWubpeXjAQFv5EFqoT3uoCbLjCe2IEEGCfEq6j9o8ZAQC1-ZRMEUpOzpLgScTKQgi53f7hRHdMnkR9XNeRqlvbObrmmdQZy33UjwdATFODmIOm88PTjtTNOIIvINL3WfYXmBBbDglXfPY1cqrCtcwKxQZDDxzl_Ou3RfSwt_YBbqRArc_Hnll--bk7SLK8zOCbB0Zp2DLvjYUiKTHB2OFuUlAXUFC0L7w"/>
+<div class="overlay absolute bottom-0 left-0 w-full p-6 translate-y-full transition-transform duration-500 bg-[#10131c]/60 backdrop-blur-xl">
+<h3 class="font-headline font-bold text-lg text-[#f2c36b]">Leila Al-Fayed</h3>
+<p class="font-body italic text-[#d2c5b2]">Chief Innovation Officer</p>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="speaker-card relative aspect-[200/280] overflow-hidden group">
+<img alt="minimalist studio portrait of a technology leader" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV5gQRaeMdND66HJgD-EgNVwUIkXg4ZE7dFWkz24VXboYs75F-pyNWRDkX4Op0I-J2HALFH08QQGsxIoJABHUHbSX8ONxAFusgZOZKAhMi-kAnoyVeC9fTfHk6KkBWxAyLHBCs0LHf60Wyp7L5EvCoy7D6T2sYXIIZqB1gowS-CGj3WXVRsyI4Ws96YVLVa3qxpQH2ulGAjrtjeWYaoGrV83s5AZHXzVwsPNopEn7qWqS-HFtbO8BWODgDTRq6ZAtR-GBJ-cuURw"/>
+<div class="overlay absolute bottom-0 left-0 w-full p-6 translate-y-full transition-transform duration-500 bg-[#10131c]/60 backdrop-blur-xl">
+<h3 class="font-headline font-bold text-lg text-[#f2c36b]">Julian Vane</h3>
+<p class="font-body italic text-[#d2c5b2]">Future Strategist</p>
+</div>
+</div>
+<div class="speaker-card relative aspect-[200/280] overflow-hidden group">
+<img alt="close up headshot of tech researcher" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-jsF4JajL9hYNx4zTgxsKtNwqqIvvNr2I5oZzY8Y1jJEVy2Af0bAVUf6biXYp7SXg4P9U0IFFFhHUXQn10DAflA8muCH6q33ulJ5kicQllpmhVOGlBWLRHK1Ea7Q6YyAEBTHCfnZYrpA8Zcnmgg94N7aY8WIkTQdIxdc6TzsUPNhLmOeIbx1SDMr0cwKbNX8bejTHihAkYHSU_yBgEYMaZ9O0QmdWKliRjry0CogTC8U09BdIMuqeSQxC-ZSFGQFIEZS9H7bAJA"/>
+<div class="overlay absolute bottom-0 left-0 w-full p-6 translate-y-full transition-transform duration-500 bg-[#10131c]/60 backdrop-blur-xl">
+<h3 class="font-headline font-bold text-lg text-[#f2c36b]">Sonia Mehta</h3>
+<p class="font-body italic text-[#d2c5b2]">Data Scientist</p>
+</div>
+</div>
+<div class="speaker-card relative aspect-[200/280] overflow-hidden group">
+<img alt="moody editorial portrait of industry leader" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDod-WqE3DjkuW7JyIu-EGedleU7XRavJ9D114LDvBTsZbcrUbcwth9wjdC_UMI4UEgWUQxns5cl63Ey1JkhisKIzTU6uzT3NFNiwPoE_aIJUowv6GRpMPk1rbEFNI1jkouuLC8tRCO75NMQCqLvvDBpTA-egxcypMFtBLDojlhxecBS52bH6bYHu-J9nvH1X3MPNW_uBWpMBcZCCgf0FrCXSiaUjIgfagtxjPmUhFSmTiUPSfe8wDZehS2fpfLWpCPsySE8CsEnw"/>
+<div class="overlay absolute bottom-0 left-0 w-full p-6 translate-y-full transition-transform duration-500 bg-[#10131c]/60 backdrop-blur-xl">
+<h3 class="font-headline font-bold text-lg text-[#f2c36b]">Rajiv Malhotra</h3>
+<p class="font-body italic text-[#d2c5b2]">System Architect</p>
+</div>
+</div>
+<div class="speaker-card relative aspect-[200/280] overflow-hidden group">
+<img alt="sharp professional business portrait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOhcoQEXMRnyJfU_b9r0j9PwDk0kGO8G-IGO4G6lG9osOpV8KZrw13isDKtg5RREb4OWgWY77P2Ha87eJhDoWopqA2wAq06jl-BVaps97aP5l7Rk_DxiO40ybD5F3GgALSmACdFHcrmPExUH6aIfeZzl9XqJ87vWEIfASuEHn8vADIw9jmNhAVbzX3lntVxUB40e8in5iPHGsJ-oXkmf2VhZurH4vlwlKFWgWC2Z8g5HgOrRAdqx3sWjRnlZIOgO9sFtkvNY-mcQ"/>
+<div class="overlay absolute bottom-0 left-0 w-full p-6 translate-y-full transition-transform duration-500 bg-[#10131c]/60 backdrop-blur-xl">
+<h3 class="font-headline font-bold text-lg text-[#f2c36b]">Nina Ross</h3>
+<p class="font-body italic text-[#d2c5b2]">Operations Lead</p>
+</div>
+</div>
+<div class="speaker-card relative aspect-[200/280] overflow-hidden group">
+<img alt="creative tech personality portrait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7DR41MitQWfof2REl9U2EYDgCu9TZYarsHlkzQuYejyiPZnRRix-wpTavhxMVbjvUmKXyoS6-CbRl3ifN5mtXv3M9WrMmWOw7HcvzCDvehmzQfNH3cwiBrFDm74JpjS3-4sWiBwnD9tH-dpidO-BIQiY3d8d_q-xnkKCDFPHqLdscwjg24IPmS6WQSlj1mo3SdWD804QIk2oimmeXKwLgQifrv3vD0R6PctNdmL9-RaMeOb9y0IQw7u2DiVoIIkP4lhBserAodQ"/>
+<div class="overlay absolute bottom-0 left-0 w-full p-6 translate-y-full transition-transform duration-500 bg-[#10131c]/60 backdrop-blur-xl">
+<h3 class="font-headline font-bold text-lg text-[#f2c36b]">David Chen</h3>
+<p class="font-body italic text-[#d2c5b2]">Design Director</p>
+</div>
+</div>
+<div class="speaker-card relative aspect-[200/280] overflow-hidden group">
+<img alt="artistic lighting headshot of tech influencer" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-B7w8PXZamohgafR25BpZ8nICvLvy35FwxGLoNGX4QjWubpeXjAQFv5EFqoT3uoCbLjCe2IEEGCfEq6j9o8ZAQC1-ZRMEUpOzpLgScTKQgi53f7hRHdMnkR9XNeRqlvbObrmmdQZy33UjwdATFODmIOm88PTjtTNOIIvINL3WfYXmBBbDglXfPY1cqrCtcwKxQZDDxzl_Ou3RfSwt_YBbqRArc_Hnll--bk7SLK8zOCbB0Zp2DLvjYUiKTHB2OFuUlAXUFC0L7w"/>
+<div class="overlay absolute bottom-0 left-0 w-full p-6 translate-y-full transition-transform duration-500 bg-[#10131c]/60 backdrop-blur-xl">
+<h3 class="font-headline font-bold text-lg text-[#f2c36b]">Amara Okafor</h3>
+<p class="font-body italic text-[#d2c5b2]">Venture Partner</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: MEDIA PARTNER GRID -->
+<section class="max-w-3xl mx-auto mt-8 mb-12 px-8 py-16 bg-[#04060e]/55 backdrop-blur-md border border-[#d4a853]/15 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+<div class="mb-12 text-center">
+<h2 class="font-headline text-3xl md:text-4xl tracking-[0.3em] text-[#d4a853] uppercase inline-block border-b border-[#d4a853]/20 pb-3">MEDIA PARTNER</h2>
+</div>
+<div class="space-y-16 max-w-xl mx-auto">
+<div class="flex flex-col items-center">
+<p class="font-headline text-xs tracking-widest text-[#d2c5b2]/40 mb-8 uppercase">OFFICIAL MEDIA PARTNER</p>
+
+<!-- Clean Centered Premium 16:9 Media Partner Box -->
+<div class="w-full max-w-[210px] flex flex-col items-center group">
+<div class="w-full aspect-video border border-[#d4a853]/20 rounded-sm flex items-center justify-center relative overflow-hidden bg-black hover:border-[#f2c36b] transition-all duration-500 shadow-xl hover:shadow-[0_15px_40px_rgba(212,168,83,0.12)] hover:-translate-y-2 cursor-pointer">
+<div class="absolute inset-0 bg-gradient-to-br from-[#d4a853]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<img alt="Official Media Partner Logo" class="w-full h-full object-contain p-[2px] bg-black opacity-80 group-hover:opacity-100 group-hover:brightness-110 transition-all duration-500" src="Media Partner.jpg"/>
+<!-- Shine effect -->
+<div class="absolute top-0 -left-[150%] w-1/2 h-full bg-gradient-to-r from-transparent via-[#d4a853]/20 to-transparent skew-x-[-25deg] group-hover:left-[200%] transition-all duration-1000"></div>
+</div>
+<div class="mt-6 text-center font-headline text-sm font-bold tracking-[0.2em] text-[#d2c5b2]/50 group-hover:text-[#f2c36b] group-hover:drop-shadow-[0_0_10px_rgba(212,168,83,0.3)] transition-all duration-500">91.9 Friends FM</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- SECTION 4: PARTNERS GRID -->
+<section class="max-w-3xl mx-auto mt-12 mb-12 px-8 py-16 bg-[#04060e]/55 backdrop-blur-md border border-[#d4a853]/15 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+<div class="mb-12 text-center">
+<h2 class="font-headline text-3xl md:text-4xl tracking-[0.3em] text-[#d4a853] uppercase inline-block border-b border-[#d4a853]/20 pb-3">PARTNERS</h2>
+</div>
+<div class="space-y-16 max-w-xl mx-auto">
+<!-- Tier 1 -->
+<div class="flex flex-col items-center">
+<p class="font-headline text-xs tracking-widest text-[#d2c5b2]/40 mb-8 uppercase">TITLE SPONSOR</p>
+<div class="w-full max-w-xs aspect-[21/9] border border-[#d4a853]/20 flex items-center justify-center group hover:border-[#f2c36b] transition-all duration-500 bg-surface-container-low hover:bg-surface-container-high relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-[#d4a853]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<img alt="minimalist premium corporate logo featuring abstract geometric lines in metallic gold on a dark slate background" class="h-16 w-auto opacity-80 group-hover:opacity-100 group-hover:brightness-110 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPVKU44L1zQl-XYS1Le3c5jOC7YnXUeXiQkQIGf0ybAqvOSpDst15qWVZzhmNWmJ0Pj3gvRpXrWahhj2bqaFVhMBmiOQQPjXe-CGKodlq7cSiVcOJpFaHZkxVDtsLTR1GQI113HecR7CPef2E91U0Pk3MGlyBlh0OgeVAyHqSMBm6ze7zzpa-V_MXDeXrz-7NKcH3SCGqxLGyOMOi7KGvsnUEWM4KC8aWujTetHFpHUeklkWWL46CoRINgkOWJn-chRn1JtIoaRA"/>
+</div>
+</div>
+<!-- Tier 2 -->
+<div class="flex flex-col items-center">
+<p class="font-headline text-xs tracking-widest text-[#d2c5b2]/40 mb-8 uppercase">CO-PRESENTING SPONSORS</p>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-2xl mx-auto">
+<div class="aspect-video border border-[#d4a853]/20 flex items-center justify-center group hover:border-[#f2c36b] transition-all duration-500 bg-surface-container-low hover:bg-surface-container-high">
+<img alt="modern minimalist company emblem with clean serif typography and an abstract circular symbol in silver tones" class="h-8 w-auto opacity-80 group-hover:opacity-100 group-hover:brightness-110 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADr6SU2Q0kKHpTuZuU-Fp_uJDgdj4zye2KouOCf8ERhB9HulqGWfEQ0z7DdR0DigMrcxdmgQU3hUejpxt-CR0Ht2retmJ7nXlHRDZjhIjo7JFaL_b29n48yLiakdxyVpdkCWEnhHwHSHz5MTKRyayMpdNGHUZc0e8iOJt4ITbwoNwRXUw8ndRAmj51mwIGLgB0fF2wv29UZA5OWM7JnxZXXslT4l2twQhXpVRcKiKFXduT89ukGYUoRhirnw1iV-ncfZzdYV7F5A"/>
+</div>
+<div class="aspect-video border border-[#d4a853]/20 flex items-center justify-center group hover:border-[#f2c36b] transition-all duration-500 bg-surface-container-low hover:bg-surface-container-high">
+<img alt="futuristic corporate mark with bold geometric shapes and a hint of bronze metallic texture" class="h-8 w-auto opacity-80 group-hover:opacity-100 group-hover:brightness-110 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA07txQXPepbI6ZIVST3ghgbPJqpaydPvfsGlKd7Jlwhtxen-xrlufyuVGuTtbdPzMU9J3wlR39OyuHNqyE0xNcLpKsmZvE3rSUQv8MiR3iV8QHXqkPUO5tgCn4DnhMU9sGBAFi5SV5JMs9jTy7RymIgecJU3zl7qsxgUBhwmjCysVQT0uJOnI9rsBqlvb0skK5uZNNIaTqWh2nKvDFJbZmTCJcKp6yQjLd83mXKs03QsoIDrsPenzsyzvFZAZVijIQHfghilKz3A"/>
+</div>
+<div class="aspect-video border border-[#d4a853]/20 flex items-center justify-center group hover:border-[#f2c36b] transition-all duration-500 bg-surface-container-low hover:bg-surface-container-high">
+<img alt="elegant luxury brand logotype with slender custom lettering on a deep charcoal backdrop" class="h-8 w-auto opacity-80 group-hover:opacity-100 group-hover:brightness-110 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXu8ceN7Ma4NjtZZu2YWYr42WtOiCmmUBS85hG0yXzx5wDTZnN-LG4TT3Q84oZ-bQg5RAODnOgKcZsMOUHpcwzjJD-xpqqQmI0ET21V3rIk1vgnLf7r16YTGijrfq5UUYmYrtqNLhHk_PM9t_ybvtHaEvz2KnDhMQYnggWqsK_KI1NLoHakPJ9q5Ul56l8YTLwhlu3zZ5ND740foPPBIBZGB9bJ9NQHNki7HxNHlE7NICUvRGehGXD8eRZMPtkI9rhuwGB-QekgrrQ"/>
+</div>
+</div>
+</div>
+<!-- Tier 3 -->
+<div class="flex flex-col items-center">
+<p class="font-headline text-xs tracking-widest text-[#d2c5b2]/40 mb-8 uppercase">ASSOCIATES</p>
+<div class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 w-full max-w-3xl mx-auto">
+<div class="aspect-square border border-[#d4a853]/10 flex items-center justify-center group hover:border-[#f2c36b]/40 transition-all duration-500 bg-surface-container-lowest hover:bg-surface-container-low">
+<div class="w-8 h-4 bg-[#d2c5b2]/10 rounded-sm group-hover:bg-[#f2c36b]/20 transition-colors"></div>
+</div>
+<div class="aspect-square border border-[#d4a853]/10 flex items-center justify-center group hover:border-[#f2c36b]/40 transition-all duration-500 bg-surface-container-lowest hover:bg-surface-container-low">
+<div class="w-8 h-4 bg-[#d2c5b2]/10 rounded-sm group-hover:bg-[#f2c36b]/20 transition-colors"></div>
+</div>
+<div class="aspect-square border border-[#d4a853]/10 flex items-center justify-center group hover:border-[#f2c36b]/40 transition-all duration-500 bg-surface-container-lowest hover:bg-surface-container-low">
+<div class="w-8 h-4 bg-[#d2c5b2]/10 rounded-sm group-hover:bg-[#f2c36b]/20 transition-colors"></div>
+</div>
+<div class="aspect-square border border-[#d4a853]/10 flex items-center justify-center group hover:border-[#f2c36b]/40 transition-all duration-500 bg-surface-container-lowest hover:bg-surface-container-low">
+<div class="w-8 h-4 bg-[#d2c5b2]/10 rounded-sm group-hover:bg-[#f2c36b]/20 transition-colors"></div>
+</div>
+<div class="aspect-square border border-[#d4a853]/10 flex items-center justify-center group hover:border-[#f2c36b]/40 transition-all duration-500 bg-surface-container-lowest hover:bg-surface-container-low">
+<div class="w-8 h-4 bg-[#d2c5b2]/10 rounded-sm group-hover:bg-[#f2c36b]/20 transition-colors"></div>
+</div>
+<div class="aspect-square border border-[#d4a853]/10 flex items-center justify-center group hover:border-[#f2c36b]/40 transition-all duration-500 bg-surface-container-lowest hover:bg-surface-container-low">
+<div class="w-8 h-4 bg-[#d2c5b2]/10 rounded-sm group-hover:bg-[#f2c36b]/20 transition-colors"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0b0e17] w-full rounded-none border-t border-[#d4a853]/15 flex flex-col items-center justify-center py-16 px-8 space-y-8 w-full">
+<div class="text-[#f2c36b] font-headline tracking-[0.2em] text-xl">BENGAL E-SUMMIT</div>
+<div class="flex space-x-12">
+<a class="text-[#d2c5b2]/60 hover:text-[#d4a853] font-['Cormorant_Garamond'] italic text-lg transition-all duration-500 hover:tracking-widest" href="#">Privacy Policy</a>
+<a class="text-[#d2c5b2]/60 hover:text-[#d4a853] font-['Cormorant_Garamond'] italic text-lg transition-all duration-500 hover:tracking-widest" href="#">Terms of Service</a>
+<a class="text-[#d2c5b2]/60 hover:text-[#d4a853] font-['Cormorant_Garamond'] italic text-lg transition-all duration-500 hover:tracking-widest" href="#">Press Kit</a>
+</div>
+<p class="text-[#d4a853] font-['Cormorant_Garamond'] italic text-lg opacity-50">© 2026 BENGAL E-SUMMIT. PRESERVING THE FUTURE.</p>
+</footer>
+</body></html>

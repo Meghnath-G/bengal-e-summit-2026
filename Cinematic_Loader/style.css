@@ -1,0 +1,231 @@
+:root {
+    --gold-light: #f0cf7a;
+    --gold-accent: #c8922a;
+}
+
+/* KALKI CINEMATIC PRELOADER */
+#kalki-cinematic-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #030303;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: opacity 1.5s ease-in-out, visibility 1.5s;
+    font-family: 'Cinzel', serif;
+}
+
+#kalki-cinematic-preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.kalki-bg-glow {
+    position: absolute;
+    width: 80vw;
+    height: 80vw;
+    background: radial-gradient(circle, rgba(240, 207, 122, 0.08) 0%, transparent 60%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulseGlow 6s infinite alternate ease-in-out;
+}
+
+#kalki-lightning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gold-light);
+    opacity: 0;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#kalki-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.kalki-particle {
+    position: absolute;
+    background-color: var(--gold-light);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px var(--gold-light), 0 0 20px 5px rgba(240, 207, 122, 0.4);
+    opacity: 0;
+    animation: floatParticle 8s infinite ease-in-out;
+}
+
+.kalki-loader-content {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.kalki-symbol-container {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cinematicFadeIn 2s 0.5s forwards ease-out;
+}
+
+.kalki-divine-chakra {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(240, 207, 122, 0.3);
+    box-shadow: 0 0 30px rgba(240, 207, 122, 0.4), inset 0 0 20px rgba(240, 207, 122, 0.2);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spinSlow 15s linear infinite;
+}
+
+.kalki-chakra-ring {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    border: 1px dashed var(--gold-light);
+    animation: spinSlowReverse 10s linear infinite;
+}
+
+.kalki-chakra-inner {
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 5px var(--gold-light), 0 0 40px 10px var(--gold-light);
+}
+
+.kalki-title-container {
+    margin-bottom: 4rem;
+}
+
+.kalki-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 18px;
+    margin: 0;
+    margin-left: 18px;
+    text-shadow: 0 0 25px rgba(240, 207, 122, 0.8), 0 0 50px rgba(240, 207, 122, 0.4);
+    opacity: 0;
+    transform: scale(0.95);
+    animation: titleReveal 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.kalki-subtitle {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--gold-light);
+    letter-spacing: 6px;
+    margin-top: 1rem;
+    margin-left: 6px;
+    text-shadow: 0 0 10px rgba(240, 207, 122, 0.5);
+    opacity: 0;
+    animation: cinematicFadeIn 2s 3s forwards ease-out;
+}
+
+.kalki-loading-wrapper {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: cinematicFadeIn 2s 4s forwards ease-out;
+}
+
+.kalki-loading-track {
+    width: 100%;
+    height: 2px;
+    background: rgba(240, 207, 122, 0.1);
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(240, 207, 122, 0.1);
+}
+
+.kalki-loading-bar {
+    width: 0%;
+    height: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 15px 2px var(--gold-light), 0 0 30px 5px var(--gold-light);
+}
+
+.kalki-loading-text {
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    letter-spacing: 6px;
+    color: var(--gold-light);
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(240, 207, 122, 0.6);
+}
+
+#kalki-white-flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0;
+    z-index: 100;
+    pointer-events: none;
+    transition: opacity 0.5s cubic-bezier(0.2, 0, 0, 1);
+}
+
+#kalki-white-flash.flashed {
+    opacity: 1;
+}
+
+@keyframes pulseGlow {
+    0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.5; }
+    100% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+}
+
+@keyframes floatParticle {
+    0% { transform: translateY(20px) scale(0.8); opacity: 0; }
+    20% { opacity: var(--max-opacity, 0.8); }
+    80% { opacity: var(--max-opacity, 0.8); }
+    100% { transform: translateY(-120px) scale(1.2); opacity: 0; }
+}
+
+@keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes spinSlowReverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+
+@keyframes cinematicFadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes titleReveal {
+    to { opacity: 1; transform: scale(1); }
+}
