@@ -1,15 +1,29 @@
+import React from 'react';
 import CinematicTransition from '../../components/common/CinematicTransition/CinematicTransition';
+import Navbar from '../../components/common/Navbar/Navbar';
+import Footer from '../../components/common/Footer/Footer';
+import GrainOverlay from '../../components/common/GrainOverlay/GrainOverlay';
+import Hero from './components/Hero';
+import EventsTimeline from './components/EventsTimeline';
+import eventsBg from './assets/events_bg.webp';
+import './Events.css';
 
 export default function Events() {
   return (
     <CinematicTransition>
-      <section className="page-section events">
-        <h1 className="cinematic-section-title">Events</h1>
-        <p className="body-text" style={{ marginTop: '2rem' }}>
-          We will be coming soon with your request, just hang on for a bit.
-          For now, for going back press the back button and enjoy other pages.
-        </p>
-      </section>
+      <div className="events-page-container" style={{ '--bg-image': `url(${eventsBg})` }}>
+        {/* Scoped Background and Overlays */}
+        <div className="events-bg" />
+        <div className="events-overlay" />
+
+        <Navbar />
+        <GrainOverlay />
+        <main>
+          <Hero />
+          <EventsTimeline />
+        </main>
+        <Footer />
+      </div>
     </CinematicTransition>
   );
 }

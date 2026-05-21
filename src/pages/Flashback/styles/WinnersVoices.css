@@ -153,7 +153,7 @@
 
 .flashback-page-container .voice-name {
   font-family: 'Cinzel', serif;
-  font-size: 14px;
+  font-size: 19px;
   font-weight: 600;
   color: var(--parchment);
   transition: all 0.3s ease;
@@ -164,16 +164,28 @@
 .flashback-page-container .voice-designation {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 14px;
+  font-size: 19px;
+  font-weight: 500;
   color: var(--muted);
   margin-top: 2px;
   transition: transform 0.3s ease;
 }
 
 @keyframes shimmer {
-  0% { color: var(--gold); text-shadow: none; }
-  50% { color: var(--parchment); text-shadow: 0 0 12px rgba(212, 168, 83, 0.8); }
-  100% { color: var(--gold); text-shadow: none; }
+  0% {
+    color: var(--gold);
+    text-shadow: none;
+  }
+
+  50% {
+    color: var(--parchment);
+    text-shadow: 0 0 12px rgba(212, 168, 83, 0.8);
+  }
+
+  100% {
+    color: var(--gold);
+    text-shadow: none;
+  }
 }
 
 @media (max-width: 992px) {
@@ -181,6 +193,7 @@
     flex-direction: column;
     gap: 24px;
   }
+
   .flashback-page-container .winner-row {
     flex: 0 0 calc(50% - 24px);
     max-width: calc(50% - 24px);

@@ -26,10 +26,9 @@ export default function ByTheNumbers() {
   return (
     <section className="section-numbers" ref={container}>
       <div className="numbers-grid">
-        <NumberTile target={5} label="YEARS OF LEGACY" />
-        <NumberTile target={30000} prefix="" suffix="+" label="ATTENDEES" />
-        <NumberTile target={15} prefix="₹" suffix="L+" label="IN PRIZES" />
-        <NumberTile target={50} prefix="" suffix="+" label="SPEAKERS" />
+        <NumberTile target={3} label="YEARS OF LEGACY" />
+        <NumberTile target={10000} prefix="" suffix="+" label="ATTENDEES" />
+        <NumberTile target={30} prefix="" suffix="+" label="SPEAKERS" />
       </div>
     </section>
   );

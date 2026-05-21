@@ -8,28 +8,30 @@ export const teamData = {
     {
       id: 'advisor-1',
       name: 'DR. SATYAJIT CHAKRABARTI',
-      role: 'Vice Chancellor, UEM Kolkata',
+      role: 'Vice Chancellor, IEM Kolkata',
       image: advisorImg
     }
   ],
   facultyExecutives: [
     {
       id: 'faculty-1',
-      name: 'DR. MOLOY GANGOPADHYAY',
-      role: 'Vice Principal, IEM Saltlake',
-      image: faculty1Img
-    },
-    {
-      id: 'faculty-2',
       name: 'DR. SUBHABRATA BANERJEE',
-      role: 'Assistant HOD, IEM Kolkata',
+      role: 'Assistant HOD, IEDC Coordinator, IEM Saltlake, Kolkata',
+      phone1: '+91 8017764037',
+      phone2: '+91 9433569949',
       image: faculty2Img
     },
     {
-      id: 'faculty-3',
+      id: 'faculty-2',
       name: 'DR. SANGHAMITRA PODDAR',
-      role: 'Dean, Student Affairs & Alumni Relations Coordinator IQAC Cell, IEM, Kolkata',
+      role: 'Dean, Student Affairs & Alumni Relations Coordinator IQAC Cell, IEM Saltlake, Kolkata',
       image: faculty3Img
+    },
+    {
+      id: 'faculty-3',
+      name: 'DR. MALAY GANGOPADHYAY',
+      role: 'Vice Principal, IEM Saltlake, Kolkata',
+      image: faculty1Img
     }
   ]
 };

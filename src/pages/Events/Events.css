@@ -1,0 +1,48 @@
+.events-page-container {
+  --bg:        #04060e;
+  --gold:      #d4a853;
+  --parchment: #e8d5b0;
+  --muted:     #b8a898;
+  --red:       #8b1a1a;
+  --font-display: 'Cinzel', serif;
+  --font-body:    'Cormorant Garamond', serif;
+
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bg);
+  color: var(--parchment);
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page Background Image & Dark Overlay Scoped Safely */
+.events-page-container .events-bg {
+  position: fixed;
+  inset: 0;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.events-page-container .events-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 6, 14, 0.55);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.events-page-container main {
+  position: relative;
+  z-index: 3;
+  flex: 1 0 auto;
+}
+
+.events-page-container a {
+  text-decoration: none;
+  color: inherit;
+}

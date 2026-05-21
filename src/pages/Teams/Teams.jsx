@@ -26,7 +26,7 @@ export default function Teams() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const target = entry.target;
-          
+
           // Add staggered delay if it's a card in a grid
           let delay = 0;
           if (target.classList.contains('team-card')) {
@@ -50,7 +50,7 @@ export default function Teams() {
             fill: 'forwards',
             delay: delay
           });
-          
+
           // Apply final state statically after animation finishes
           setTimeout(() => {
             target.style.opacity = '1';
@@ -67,7 +67,7 @@ export default function Teams() {
     const revealElements = document.querySelectorAll(
       '.teams-page-container .section-title, .teams-page-container .glowing-divider, .teams-page-container .team-card, .teams-page-container .coming-soon-container'
     );
-    
+
     revealElements.forEach(el => {
       revealObserver.observe(el);
     });
@@ -82,31 +82,31 @@ export default function Teams() {
       <div className="teams-page-container">
         {/* Official Global Navbar */}
         <Navbar />
-        
+
         <main style={{ flex: '1 0 auto' }}>
           <Hero />
-          
+
           {/* Advisor Section */}
-          <TeamSection 
-            title="ADVISOR" 
-            gridClass="single-card" 
-            members={teamData.advisors} 
+          <TeamSection
+            title="ADVISOR"
+            gridClass="single-card"
+            members={teamData.advisors}
           />
-          
+
           {/* Faculty Executive Team Section */}
-          <TeamSection 
-            title="FACULTY EXECUTIVE TEAM" 
-            gridClass="three-col" 
-            members={teamData.facultyExecutives} 
+          <TeamSection
+            title="FACULTY EXECUTIVE TEAM"
+            gridClass="three-col"
+            members={teamData.facultyExecutives}
           />
-          
+
           {/* Student Team Section */}
-          <TeamSection 
-            title="STUDENT TEAM" 
-            isComingSoon={true} 
+          <TeamSection
+            title="STUDENT TEAM"
+            isComingSoon={true}
           />
         </main>
-        
+
         {/* Official Global Footer */}
         <Footer />
       </div>

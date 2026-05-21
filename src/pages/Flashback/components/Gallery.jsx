@@ -7,13 +7,33 @@ import img2 from '../../../assets/flashback/IMG_2.webp';
 import img3 from '../../../assets/flashback/IMG_3.webp';
 import img4 from '../../../assets/flashback/IMG_4.webp';
 import img5 from '../../../assets/flashback/IMG_5.webp';
+import img6 from '../../../assets/flashback/IMG_6.webp';
+import img7 from '../../../assets/flashback/IMG_7.webp';
+import img8 from '../../../assets/flashback/IMG_8.webp';
+import img9 from '../../../assets/flashback/IMG_9.webp';
+import img10 from '../../../assets/flashback/IMG_10.webp';
+import img11 from '../../../assets/flashback/IMG_11.webp';
+import img12 from '../../../assets/flashback/IMG_12.webp';
+import img13 from '../../../assets/flashback/IMG_13.webp';
+import img14 from '../../../assets/flashback/IMG_14.webp';
+import img15 from '../../../assets/flashback/IMG_15.webp';
 
 const slides = [
   { src: img1, alt: 'Era 2021' },
   { src: img2, alt: 'Era 2022' },
   { src: img3, alt: 'Era 2023' },
   { src: img4, alt: 'Era 2024' },
-  { src: img5, alt: 'Era 2025' }
+  { src: img5, alt: 'Era 2025' },
+  { src: img6, alt: 'Era 2026' },
+  { src: img7, alt: 'Era 2027' },
+  { src: img8, alt: 'Era 2028' },
+  { src: img9, alt: 'Era 2029' },
+  { src: img10, alt: 'Era 2030' },
+  { src: img11, alt: 'Era 2031' },
+  { src: img12, alt: 'Era 2032' },
+  { src: img13, alt: 'Era 2033' },
+  { src: img14, alt: 'Era 2034' },
+  { src: img15, alt: 'Era 2035' }
 ];
 
 export default function Gallery() {
@@ -72,14 +92,14 @@ export default function Gallery() {
         </div>
 
         <div className="slider-wrapper">
-          <div 
-            className="slider-container" 
+          <div
+            className="slider-container"
             id="slider-container"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {slides.map((slide, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="slider-slide"
                 onClick={() => {
                   setLightboxImg(slide.src);
@@ -96,8 +116,8 @@ export default function Gallery() {
       </section>
 
       {/* Lightbox Modal */}
-      <div 
-        className={`lightbox-modal ${lightboxActive ? 'active' : ''}`} 
+      <div
+        className={`lightbox-modal ${lightboxActive ? 'active' : ''}`}
         id="lightbox-modal"
         onClick={(e) => {
           if (e.target.id === 'lightbox-modal') {
@@ -105,18 +125,18 @@ export default function Gallery() {
           }
         }}
       >
-        <button 
-          className="lightbox-close" 
+        <button
+          className="lightbox-close"
           id="lightbox-close"
           onClick={() => setLightboxActive(false)}
         >
           &times;
         </button>
-        <img 
-          src={lightboxImg} 
-          alt="Expanded View" 
-          className="lightbox-content" 
-          id="lightbox-img" 
+        <img
+          src={lightboxImg}
+          alt="Expanded View"
+          className="lightbox-content"
+          id="lightbox-img"
         />
       </div>
     </>

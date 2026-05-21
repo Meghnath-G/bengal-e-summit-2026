@@ -6,7 +6,7 @@ export default function TeamSection({ title, gridClass, members, isComingSoon })
     <section className="team-section">
       <h2 className="section-title">{title}</h2>
       <div className="glowing-divider"></div>
-      
+
       {isComingSoon ? (
         <div className="coming-soon-container">
           <p className="coming-soon">COMING SOON</p>
@@ -20,6 +20,8 @@ export default function TeamSection({ title, gridClass, members, isComingSoon })
               name={member.name}
               role={member.role}
               image={member.image}
+              phone1={member.phone1}
+              phone2={member.phone2}
             />
           ))}
         </div>

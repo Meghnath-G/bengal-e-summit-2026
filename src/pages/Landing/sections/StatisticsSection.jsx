@@ -165,11 +165,11 @@ export default function StatisticsSection() {
             <p className="stat-text">Total Participants</p>
           </div>
           <div className="stat-block">
-            <h3 className="stat-number">50+</h3>
+            <h3 className="stat-number">30+</h3>
             <p className="stat-text">Total Industry Leaders</p>
           </div>
           <div className="stat-block">
-            <h3 className="stat-number">15+</h3>
+            <h3 className="stat-number">13+</h3>
             <p className="stat-text">Mega Events</p>
           </div>
         </div>

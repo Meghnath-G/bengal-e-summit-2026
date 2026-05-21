@@ -4,9 +4,9 @@ export default function Footer() {
   return (
     <footer className="cinematic-footer">
       <div className="footer-top-border"></div>
-      
+
       <div className="footer-container">
-        
+
         {/* Left Side: Brand & Mission */}
         <div className="footer-column footer-left">
           <h3 className="footer-brand-title">BENGAL E-SUMMIT 2026</h3>
@@ -27,9 +27,16 @@ export default function Footer() {
         <div className="footer-column footer-right">
           <div className="contact-item">
             <span className="contact-icon">⚲</span>
-            <p>Institute of Engineering and Management (IEM), Gurukul Building</p>
+            <a
+              href="https://www.google.com/maps/place/IEM+Gurukul+Building/@22.5745162,88.4325809"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              IEM Gurukul Building, Y2, EP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091
+            </a>
           </div>
-          
+
           <div className="contact-item">
             <span className="contact-icon">✉</span>
             <a href="mailto:bengalesummit@gmail.com" className="contact-link">bengalesummit@gmail.com</a>

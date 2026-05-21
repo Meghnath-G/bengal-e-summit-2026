@@ -1,6 +1,6 @@
 .flashback-page-container .section-numbers {
   background: transparent;
-  padding: 100px 48px 120px;
+  padding: 80px 48px 100px;
   position: relative;
 }
 
@@ -13,10 +13,10 @@
 }
 
 .flashback-page-container .numbers-grid {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 

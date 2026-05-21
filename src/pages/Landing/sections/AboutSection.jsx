@@ -26,10 +26,10 @@ export default function AboutSection() {
     if (aboutTimeline.scrollTrigger) triggers.push(aboutTimeline.scrollTrigger);
 
     aboutTimeline
-      .fromTo(tagRef.current,    { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 1.5, ease: 'power2.out' })
-      .fromTo(titleRef.current,  { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 2,   ease: 'power2.out' }, '-=0.5')
-      .fromTo(textRef.current,   { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 2.5, ease: 'power2.out' }, '-=1')
-      .fromTo(footerRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 2,   ease: 'power2.out' }, '-=1.5')
+      .fromTo(tagRef.current, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 1.5, ease: 'power2.out' })
+      .fromTo(titleRef.current, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 2, ease: 'power2.out' }, '-=0.5')
+      .fromTo(textRef.current, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 2.5, ease: 'power2.out' }, '-=1')
+      .fromTo(footerRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 2, ease: 'power2.out' }, '-=1.5')
       .to({}, { duration: 1 });
 
     return () => {
@@ -57,7 +57,7 @@ export default function AboutSection() {
 
         <div className="about-footer" ref={footerRef}>
           <div className="thin-gold-line"></div>
-          Institute of Engineering &amp; Management · Kolkata
+          Institute of Engineering &amp; Management · Salt Lake,Kolkata
         </div>
       </div>
     </section>

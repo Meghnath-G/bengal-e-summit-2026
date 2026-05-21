@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './HeroSection.css';
@@ -42,7 +43,7 @@ export default function HeroSection() {
     function render() {
       let rawIndex = Math.round(frames.currentIndex);
       let frameNum = rawIndex + 1; // 1-based
-      
+
       // Snap to closest loaded frame if skipping
       if (skipFactor > 1 && frameNum % skipFactor === 0) {
         frameNum -= 1;
@@ -206,9 +207,21 @@ export default function HeroSection() {
           <div className="hero-content">
 
             <div className="hero-brand-logos">
-              <img src="/images/logos/iem.webp"  alt="IEM" className="hero-logo-img iem-logo" />
-              <span className="hero-brand-title">SCHOOL OF UNIVERSITY OF ENGINEERING AND MANAGEMENT</span>
-              <img src="/images/logos/uem.webp"  alt="UEM" className="hero-logo-img" />
+              <img src="/images/logos/iem.webp" alt="IEM" className="hero-logo-img iem-logo" />
+              <div className="hero-brand-title-group">
+                <span className="hero-brand-title-main">
+                  INSTITUTE OF ENGINEERING AND MANAGEMENT
+                </span>
+
+                <span className="hero-brand-title-sub">
+                  SCHOOL OF UNIVERSITY OF ENGINEERING AND MANAGEMENT
+                </span>
+              </div>
+              <img src="/images/logos/uem.webp" alt="UEM" className="hero-logo-img" />
+            </div>
+
+            <div className="hero-presents">
+              PRESENTS
             </div>
 
             <div className="hero-summit-symbol">
@@ -228,11 +241,12 @@ export default function HeroSection() {
 
             <div className="hero-actions">
               <a href="#register" className="btn-solid">⚡ REGISTER NOW</a>
-              <a href="#explore" className="btn-outline-gold">EXPLORE EVENTS</a>
+              <Link to="/events" className="btn-outline-gold">EXPLORE EVENTS</Link>
             </div>
 
             <div className="hero-venue">
-              Venue: Institute of Engineering and Management, Gurukul Building
+              Venue: Institute of Engineering and Management,
+              Gurukul Building, Kolkata
             </div>
           </div>
 
@@ -248,18 +262,18 @@ export default function HeroSection() {
             <div className="plot-tag">THE PROBLEM</div>
             <div className="plot-divider"></div>
             <p className="plot-text">
-              2898 AD. The world's greatest civilization lies in ruin.<br />
-              Ancient temples. Iron scaffolding. A broken economy.
+              2898 AD. The world has technology.
+              What it lacks is vision.
             </p>
           </div>
-          <div className="continue-text">CONTINUE THE JOURNEY ↓</div>
+          <div className="continue-text">CONTINUE THE JOURNEY</div>
         </section>
 
         {/* Section 3: Climax */}
         <section className="climax-section" id="climax-section">
           <div className="climax-content">
-            <p className="climax-intro line-1">Every civilization that fell…</p>
-            <p className="climax-intro line-2">was rebuilt by one thing.</p>
+            <p className="climax-intro line-1">And when civilizations lose their way,</p>
+            <p className="climax-intro line-2">they are rebuilt by--</p>
             <h2 className="climax-reveal">AN ENTREPRENEUR</h2>
             <div className="climax-footer">BENGAL E-SUMMIT 2026 · IEM KOLKATA</div>
           </div>
