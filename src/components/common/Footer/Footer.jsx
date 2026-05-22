@@ -17,7 +17,12 @@ export default function Footer() {
 
         {/* Center: Brochure CTA */}
         <div className="footer-column footer-center">
-          <a href="#" className="cinematic-brochure-btn">
+          <a
+            href="/esummit_brochure/esummit_brochure.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cinematic-brochure-btn"
+          >
             <span className="btn-glow"></span>
             <span className="btn-text">Download Brochure</span>
           </a>

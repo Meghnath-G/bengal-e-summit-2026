@@ -75,16 +75,5 @@ export const eventsData = [
     mascot: 'thisisbizness.webp',
     hasRegister: true,
     hasLearnMore: true,
-  },
-  {
-    id: '08',
-    side: 'right',
-    name: 'VENTURE VERSE',
-    icon: '🌟',
-    description: 'JOURNEY OF A SUCCESSFUL ENTREPRENEUR',
-    backDescription: 'Venture Verse is a vibrant event where alumni entrepreneurs share their startup journeys, innovative ideas, and real-world business insights. Perfect for aspiring founders, curious minds, or anyone dreaming of a startup connect with those who’ve been in your shoes and are now leading the way.',
-    mascot: 'ventureverse.webp',
-    hasRegister: true,
-    hasLearnMore: true,
   }
 ];

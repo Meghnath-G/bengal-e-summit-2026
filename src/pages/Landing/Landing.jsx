@@ -24,7 +24,9 @@ export default function Landing() {
       <StatisticsSection />
       
       {/* Official Landing Page Footer */}
-      <Footer />
+      <div style={{ position: 'relative', zIndex: 50 }}>
+        <Footer />
+      </div>
     </>
   );
 }
