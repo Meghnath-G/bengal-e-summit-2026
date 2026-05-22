@@ -196,3 +196,84 @@
     font-size: 18px;
   }
 }
+
+/* ================================ */
+/* MOBILE FIXES — DO NOT EDIT ABOVE */
+/* ================================ */
+
+@media (max-width: 768px) {
+  /* BOTH LEFT AND RIGHT CARDS — same layout on mobile */
+  .events-page-container .event-card,
+  .events-page-container .event-card.left,
+  .events-page-container .event-card.right {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    padding: 24px 20px !important;
+    box-sizing: border-box !important;
+    /* Prevent overlap */
+    float: none !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+
+  /* CARD CONTENT — readable on small screen */
+  .events-page-container .card-title,
+  .events-page-container .card-back-title {
+    font-size: clamp(16px, 5vw, 22px) !important;
+    line-height: 1.2 !important;
+  }
+
+  .events-page-container .card-desc,
+  .events-page-container .card-back-desc {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* WATERMARK NUMBER — smaller on mobile */
+  .events-page-container .card-watermark {
+    font-size: 48px !important;
+    top: 8px !important;
+    right: 12px !important;
+  }
+
+  /* ICON — smaller on mobile */
+  .events-page-container .card-mascot {
+    height: 100px !important;
+    width: 100px !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* BUTTONS ROW — stack if needed on very small screens */
+  .events-page-container .card-footer {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin-top: 16px !important;
+  }
+
+  .events-page-container .card-register-btn,
+  .events-page-container .card-learn-more-btn {
+    font-size: 10px !important;
+    padding: 8px 16px !important;
+    letter-spacing: 2px !important;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .events-page-container .event-card,
+  .events-page-container .event-card.left,
+  .events-page-container .event-card.right {
+    padding: 20px 16px !important;
+  }
+
+  .events-page-container .card-title,
+  .events-page-container .card-back-title {
+    font-size: 15px !important;
+  }
+}

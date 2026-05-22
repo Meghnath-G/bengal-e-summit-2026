@@ -43,13 +43,12 @@ export default function WinnersVoices() {
           {/* Left: Special Guests */}
           <div className="wv-card" id="left-voices-card">
             <div className="card-header">
-              <span className="card-icon">🎙️</span>
               <h2 className="card-title">SPECIAL GUESTS AND SPEAKERS</h2>
             </div>
             <div className="voices-list">
 
               <div className="voice-row">
-                <div className="voice-avatar" style={{ background: 'linear-gradient(135deg, #d4a853 0%, #8b6914 100%)' }}></div>
+
                 <div className="voice-info">
                   <p className="voice-name">Dr. Bandanna Sen</p>
                   <p className="voice-designation">Director General at DGCIS</p>
@@ -57,7 +56,7 @@ export default function WinnersVoices() {
               </div>
 
               <div className="voice-row">
-                <div className="voice-avatar" style={{ background: 'linear-gradient(135deg, #b8a898 0%, #6b5e52 100%)' }}></div>
+
                 <div className="voice-info">
                   <p className="voice-name">Dr. Subhalakshmi Ghosh</p>
                   <p className="voice-designation">Founder of Subhami Biopharma (OPC) Pvt. Ltd. And co-founder of Alona Life Sciences</p>
@@ -65,7 +64,7 @@ export default function WinnersVoices() {
               </div>
 
               <div className="voice-row">
-                <div className="voice-avatar" style={{ background: 'linear-gradient(135deg, #d4a853 0%, #4a3a1a 100%)' }}></div>
+
                 <div className="voice-info">
                   <p className="voice-name">Mr. Madan Mohan Chakraborty</p>
                   <p className="voice-designation">CEO and Managing Director of Iskraemeco India</p>
@@ -73,7 +72,7 @@ export default function WinnersVoices() {
               </div>
 
               <div className="voice-row">
-                <div className="voice-avatar" style={{ background: 'linear-gradient(135deg, #e8d5b0 0%, #8b6914 100%)' }}></div>
+
                 <div className="voice-info">
                   <p className="voice-name"> Mr. Nilanjan Ray</p>
                   <p className="voice-designation">Director of METCO (Metal Engineering and Treatment Company)</p>
@@ -81,7 +80,7 @@ export default function WinnersVoices() {
               </div>
 
               <div className="voice-row">
-                <div className="voice-avatar" style={{ background: 'linear-gradient(135deg, #e8d5b0 0%, #8b6914 100%)' }}></div>
+
                 <div className="voice-info">
                   <p className="voice-name">Mr. Anup Das</p>
                   <p className="voice-designation">Chief Strategy Officer and Head of India Operations at Exavalu</p>

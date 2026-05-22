@@ -110,3 +110,98 @@
     display: none;
   }
 }
+
+/* ================================ */
+/* MOBILE FIXES — DO NOT EDIT ABOVE */
+/* ================================ */
+
+@media (max-width: 768px) {
+  /* TIMELINE CONTAINER */
+  .events-page-container .timeline-section {
+    position: relative;
+    padding: 0 0 60px 0;
+    overflow: visible;
+  }
+
+  /* MOVE TIMELINE LINE TO LEFT EDGE — not center */
+  .events-page-container .timeline-line {
+    left: 24px !important;
+    transform: none !important;
+    width: 1px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    position: absolute !important;
+  }
+
+  /* EACH EVENT ROW — stack vertically, all left aligned */
+  .events-page-container .timeline-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+    width: 100% !important;
+    margin-bottom: 48px !important;
+    padding-left: 56px !important;
+    /* Reset any left/right positioning from desktop */
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+  /* TIMELINE NODE DOT — pin to left line, never inside card */
+  .events-page-container .timeline-node,
+  .events-page-container .timeline-node-wrapper {
+    position: absolute !important;
+    left: 24px !important;
+    top: 24px !important;
+    transform: translateX(-50%) !important;
+    z-index: 10 !important;
+    /* Make sure it sits ON the line, not inside the card */
+    margin: 0 !important;
+  }
+
+  /* HORIZONTAL CONNECTOR LINE from node to card */
+  .events-page-container .connector,
+  .events-page-container .left-connector,
+  .events-page-container .right-connector {
+    position: absolute !important;
+    left: 24px !important;
+    top: 24px !important;
+    width: 32px !important;
+    height: 1px !important;
+    /* Reset any right-side connector */
+    right: auto !important;
+    transform: none !important;
+    display: block !important;
+  }
+
+  /* ENSURE NO OVERLAP between consecutive cards */
+  .events-page-container .timeline-row + .events-page-container .timeline-row {
+    margin-top: 0 !important;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .events-page-container .timeline-row {
+    padding-left: 44px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .events-page-container .timeline-line {
+    left: 16px !important;
+  }
+
+  .events-page-container .timeline-node,
+  .events-page-container .timeline-node-wrapper {
+    left: 16px !important;
+  }
+
+  .events-page-container .connector,
+  .events-page-container .left-connector,
+  .events-page-container .right-connector {
+    left: 16px !important;
+    width: 28px !important;
+  }
+}
