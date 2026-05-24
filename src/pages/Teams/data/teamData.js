@@ -1,6 +1,6 @@
 import advisorImg from '../../../assets/teams/ADVISOR.webp';
 import faculty1Img from '../../../assets/teams/faculty-exec-1.webp';
-import faculty2Img from '../../../assets/teams/faculty-exec-2.webp';
+import faculty2Img from '../../../assets/teams/faculty-exec-2.jpeg';
 import faculty3Img from '../../../assets/teams/faculty-exec-3.webp';
 
 export const teamData = {

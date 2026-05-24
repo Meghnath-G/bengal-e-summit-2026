@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { preloadedFrames, framesReady, onFramesReady } from '../../../App';
 import './HeroSection.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -164,24 +165,27 @@ export default function HeroSection() {
       gsap.set('.climax-reveal', { scale: 0.85 });
     }
 
-    // Preload — optimized for mobile
-    let loadedCount = 0;
-    const totalFramesToLoad = Math.floor((FRAME_COUNT - 1) / skipFactor) + 1;
+    function populateFromCache() {
+      Object.keys(preloadedFrames).forEach(key => {
+        images[parseInt(key)] = preloadedFrames[key];
+      });
+    }
 
-    for (let i = 1; i <= FRAME_COUNT; i += skipFactor) {
-      const img = new Image();
-      img.src = `${FRAME_PREFIX}${padFrame(i)}${FRAME_EXT}`;
-      img.onload = () => {
-        loadedCount++;
-        if (loadedCount === 1) resizeCanvas();
-        if (loadedCount === totalFramesToLoad) {
-          initScrollAnimations();
-          setTimeout(() => {
-            ScrollTrigger.refresh();
-          }, 100);
-        }
-      };
-      images[i] = img;
+    if (framesReady) {
+      // Best case: all frames loaded during loader — zero delay, no jump
+      populateFromCache();
+      resizeCanvas();
+      initScrollAnimations();
+      ScrollTrigger.refresh();
+    } else {
+      // Fallback: frames still loading — populate what exists, wait for rest
+      populateFromCache();
+      resizeCanvas();
+      onFramesReady.push(() => {
+        populateFromCache();
+        initScrollAnimations();
+        ScrollTrigger.refresh();
+      });
     }
 
     return () => {
@@ -207,7 +211,7 @@ export default function HeroSection() {
           <div className="hero-content">
 
             <div className="hero-brand-logos">
-              <img src="/images/logos/iem.webp" alt="IEM" className="hero-logo-img iem-logo" />
+              <img src="/images/logos/iem.webp" alt="IEM" className="hero-logo-img iem-logo" width="150" height="150" />
               <div className="hero-brand-title-group">
                 <span className="hero-brand-title-main">
                   INSTITUTE OF ENGINEERING AND MANAGEMENT
@@ -217,7 +221,7 @@ export default function HeroSection() {
                   SCHOOL OF UNIVERSITY OF ENGINEERING AND MANAGEMENT
                 </span>
               </div>
-              <img src="/images/logos/uem.webp" alt="UEM" className="hero-logo-img" />
+              <img src="/images/logos/uem.webp" alt="UEM" className="hero-logo-img" width="150" height="150" />
             </div>
 
             <div className="hero-presents">
@@ -225,7 +229,7 @@ export default function HeroSection() {
             </div>
 
             <div className="hero-summit-symbol">
-              <img src="/images/logos/summit logo.png" alt="Summit Logo" className="hero-summit-logo" />
+              <img src="/images/logos/summit logo.png" alt="Summit Logo" className="hero-summit-logo" width="600" height="150" />
             </div>
 
             <h1 className="hero-title">

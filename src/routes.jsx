@@ -17,18 +17,7 @@ const Flashback = lazy(() => import('./pages/Flashback/Flashback'));
 const preloadLanding = () => import('./pages/Landing/Landing');
 preloadLanding();
 
-// Route Wrapper to handle GSAP ScrollTrigger refresh on mount
 function RouteWrapper({ children }) {
-  useEffect(() => {
-    // Refresh ScrollTrigger calculations after a short delay once the route component mounts
-    const timer = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 150);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
-
   return children;
 }
 

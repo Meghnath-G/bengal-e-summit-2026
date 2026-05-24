@@ -2,7 +2,6 @@
    NAVBAR — Exact preservation from landing_page/style.css
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,300;1,400&display=swap');
 
 :root {
     --bg-dark: #04060e;
@@ -169,6 +168,46 @@
     border-color: rgba(212, 168, 83, 0.4);
 }
 
+/* Music Toggle Button */
+.btn-music-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(212, 168, 83, 0.05);
+    border: 1px solid rgba(212, 168, 83, 0.3);
+    color: var(--primary-gold);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.btn-music-toggle:hover {
+    background: rgba(212, 168, 83, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 168, 83, 0.15);
+    border-color: rgba(212, 168, 83, 0.6);
+    color: #ebd197;
+}
+
+.btn-music-toggle:active {
+    transform: translateY(0);
+}
+
+.btn-music-toggle:focus-visible {
+    outline: 2px solid rgba(212, 168, 83, 0.6);
+    outline-offset: 4px;
+}
+
+.music-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
 /* Mobile Menu Button */
 .mobile-menu-btn {
     display: none;
@@ -198,6 +237,8 @@
     .brand-block { padding: 0 8px; }
     .nav-link { font-size: 0.8rem; }
     .btn-register { padding: 12px 24px; font-size: 0.85rem; }
+    .btn-music-toggle { width: 38px; height: 38px; }
+    .music-icon { width: 16px; height: 16px; }
 }
 
 /* Tablets (992px) */
@@ -245,6 +286,8 @@
 
     .nav-link { font-size: clamp(1.2rem, 4vw, 1.5rem); padding: 12px; width: 100%; text-align: center; }
     .btn-register { font-size: clamp(1.1rem, 3.5vw, 1.3rem); padding: 16px 40px; margin-top: 10px; width: 80%; max-width: 300px; text-align: center; }
+    .btn-music-toggle { width: 50px; height: 50px; margin-top: 10px; }
+    .music-icon { width: 22px; height: 22px; }
 }
 
 /* Mobile (768px) */

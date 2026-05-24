@@ -148,8 +148,8 @@ export default function CountdownSection() {
       if (anim2.scrollTrigger) triggers.push(anim2.scrollTrigger);
     }
 
-    // Dynamic document height safety trigger refresh
-    ScrollTrigger.refresh();
+    // Removed redundant document height safety trigger refresh
+    // ScrollTrigger.refresh();
 
     return () => {
       clearInterval(intervalId);
