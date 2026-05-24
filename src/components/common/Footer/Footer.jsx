@@ -38,7 +38,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="contact-link"
             >
-              IEM Gurukul Building, Y2, EP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091
+              IEM Gurukul Building, EP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091
             </a>
           </div>
 

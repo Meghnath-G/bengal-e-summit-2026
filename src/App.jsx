@@ -1,6 +1,6 @@
 import Loader from './components/common/Loader/Loader';
 import AppRoutes from './routes';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Lenis from 'lenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -43,7 +43,9 @@ function preloadHeroFrames() {
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+  const lenisRef = useRef(null);
 
+  // Initialize Lenis once
   useEffect(() => {
     preloadHeroFrames();
 
@@ -52,6 +54,7 @@ export default function App() {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smooth: true,
     });
+    lenisRef.current = lenis;
 
     // Synchronize Lenis with GSAP ScrollTrigger
     lenis.on('scroll', ScrollTrigger.update);
@@ -67,10 +70,34 @@ export default function App() {
     };
   }, []);
 
+  // Manage scroll lock and lenis state based on loader
+  useEffect(() => {
+    if (loading) {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+      lenisRef.current?.stop();
+    } else {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+      lenisRef.current?.start();
+      
+      // Give DOM a frame to update before refreshing ScrollTrigger
+      requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
+      });
+    }
+
+    // Cleanup in case component unmounts
+    return () => {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    };
+  }, [loading]);
+
   return (
     <>
       {loading && <Loader onComplete={() => setLoading(false)} />}
-      {!loading && <AppRoutes />}
+      <AppRoutes />
     </>
   );
 }
