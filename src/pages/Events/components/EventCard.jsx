@@ -61,7 +61,7 @@ export default function EventCard({ event }) {
           />
           <div className="card-footer" onClick={(e) => e.stopPropagation()}>
             {event.hasRegister && (
-              <a href="#" className="card-register-btn">REGISTER</a>
+              <a href="https://forms.gle/CVJszvgztG12A59Y7" className="card-register-btn">REGISTER</a>
             )}
             {event.hasLearnMore && (
               <button className="card-learn-more-btn" onClick={() => setIsFlipped(true)}>LEARN MORE</button>

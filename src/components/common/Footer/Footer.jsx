@@ -18,7 +18,7 @@ export default function Footer() {
         {/* Center: Brochure CTA */}
         <div className="footer-column footer-center">
           <a
-            href="/esummit_brochure/esummit_brochure.pdf"
+            href="/esummit_brochure/esummit_brochure2.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="cinematic-brochure-btn"
@@ -38,7 +38,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="contact-link"
             >
-              IEM Gurukul Building, EP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091
+              Institute of Engineering and Management, Gurukul Campus, EP Block, Sector V,Bidhannagar, Kolkata - 700091, West Bengal
             </a>
           </div>
 

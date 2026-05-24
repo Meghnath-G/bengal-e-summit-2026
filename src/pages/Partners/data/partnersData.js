@@ -4,7 +4,7 @@ import mediaPartnerLogo from '../../../assets/partners/Media Partner.jpg';
 export const partnersData = {
   mediaPartner: {
     name: "91.9 Friends FM",
-    role: "OFFICIAL MEDIA PARTNER",
+    role: "",
     logo: mediaPartnerLogo
   },
   tiers: [

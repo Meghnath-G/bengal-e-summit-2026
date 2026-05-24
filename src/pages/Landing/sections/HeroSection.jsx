@@ -244,7 +244,7 @@ export default function HeroSection() {
             </h1>
 
             <div className="hero-actions">
-              <a href="#register" className="btn-solid">⚡ REGISTER NOW</a>
+              <a href="https://forms.gle/CVJszvgztG12A59Y7" className="btn-solid">⚡ REGISTER NOW</a>
               <Link to="/events" className="btn-outline-gold">EXPLORE EVENTS</Link>
             </div>
 

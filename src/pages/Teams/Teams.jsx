@@ -102,7 +102,7 @@ export default function Teams() {
 
           {/* Student Team Section */}
           <TeamSection
-            title="STUDENT TEAM"
+            title="EVENT LEADS"
             isComingSoon={true}
           />
         </main>

@@ -13,7 +13,7 @@ export default function Navbar() {
 
   useEffect(() => {
     audioRef.current = new Audio(bgm);
-    
+
     // Automatically play theme music by default
     audioRef.current.play().catch(err => {
       console.warn("Autoplay prevented:", err);
@@ -35,7 +35,7 @@ export default function Navbar() {
 
   const toggleAudio = () => {
     if (!audioRef.current) return;
-    
+
     // If playback was blocked initially by browser policies, ensure it starts
     if (audioRef.current.paused) {
       audioRef.current.play().catch(err => {
@@ -109,7 +109,7 @@ export default function Navbar() {
           <Link to="/flashback" className={`nav-link${isActive('/flashback') ? ' active' : ''}`} onClick={handleLinkClick}>FLASHBACK</Link>
           <Link to="/partners" className={`nav-link${isActive('/partners') ? ' active' : ''}`} onClick={handleLinkClick}>PARTNERS</Link>
           <Link to="/teams" className={`nav-link${isActive('/teams') ? ' active' : ''}`} onClick={handleLinkClick}>TEAM</Link>
-          <a href="#register" className="btn-register" onClick={handleLinkClick}>REGISTER</a>
+          <a href="https://forms.gle/CVJszvgztG12A59Y7" className="btn-register" onClick={handleLinkClick}>REGISTER</a>
           <button
             className="btn-music-toggle"
             onClick={toggleAudio}

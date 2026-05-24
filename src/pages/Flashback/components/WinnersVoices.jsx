@@ -43,7 +43,7 @@ export default function WinnersVoices() {
           {/* Left: Special Guests */}
           <div className="wv-card" id="left-voices-card">
             <div className="card-header">
-              <h2 className="card-title">SPECIAL GUESTS AND SPEAKERS</h2>
+              <h2 className="card-title">SPECIAL GUESTS AND SPEAKERS (BENGAL E-SUMMIT 2025)</h2>
             </div>
             <div className="voices-list">
 
