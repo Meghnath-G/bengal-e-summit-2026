@@ -1,6 +1,6 @@
 .flashback-page-container .section-gallery {
   background: transparent;
-  padding: 120px 48px 140px;
+  padding: 120px 16px 140px;
 }
 
 .flashback-page-container .slider-wrapper {
@@ -25,17 +25,25 @@
 
 .flashback-page-container .slider-slide {
   min-width: 100%;
-  height: 500px;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: relative;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
+
+  background: transparent;
 }
 
 .flashback-page-container .slider-slide img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
+  display: block;
+
   transition: transform 0.4s ease;
 }
 
@@ -43,38 +51,7 @@
   transform: scale(1.03);
 }
 
-.flashback-page-container .slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(4, 6, 14, 0.8);
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
 
-.flashback-page-container .slider-btn:hover {
-  background: var(--gold);
-  color: var(--bg);
-  box-shadow: 0 0 16px rgba(212, 168, 83, 0.5);
-}
-
-.flashback-page-container .slider-prev {
-  left: 32px;
-}
-
-.flashback-page-container .slider-next {
-  right: 32px;
-}
 
 .flashback-page-container .lightbox-modal {
   position: fixed;
@@ -126,20 +103,4 @@
 .flashback-page-container .lightbox-close:hover {
   transform: scale(1.2);
 }
-
-@media (max-width: 768px) {
-  .flashback-page-container .slider-slide {
-    height: 300px;
-  }
-  .flashback-page-container .slider-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 16px;
-  }
-  .flashback-page-container .slider-prev {
-    left: 12px;
-  }
-  .flashback-page-container .slider-next {
-    right: 12px;
-  }
-}
+

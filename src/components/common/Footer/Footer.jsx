@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="footer-column footer-left">
           <h3 className="footer-brand-title">BENGAL E-SUMMIT 2026</h3>
           <p className="footer-description">
-            An experience at Institute of Engineering and Management (IEM), Kolkata where founders, investors, thought leaders, and changemakers gather to shape the future of Bengal's entrepreneurial and technological landscape.
+            An experience at Institute of Engineering and Management (IEM), Kolkata. Since 1989, the legacy of Institute of Engineering and Management has driven industry-focused excellence in engineering, management, innovation, and entrepreneurship—shaping the future of Bengal’s technological landscape.
           </p>
         </div>
 

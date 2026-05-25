@@ -51,14 +51,32 @@ export default function Partners() {
 
           {/* SECTION 2: PARTNERS LISTING (GLASS CARD) */}
           <GlassCard title="PARTNERS">
-            {tiers.map(tier => (
-              <PartnerTier
-                key={tier.id}
-                label={tier.label}
-                className={tier.className}
-                sponsors={tier.sponsors}
-              />
-            ))}
+            <div className="media-partner-container">
+              <div className="media-partner-card">
+                <div className="card-inner">
+                  <img
+                    src="/images/logos/iedc.webp"
+                    alt="UPDATING SOON"
+                    className="partner-logo"
+                  />
+                  <div className="shine-sweep"></div>
+                </div>
+              </div>
+              <div
+                className="media-partner-name"
+                style={{
+                  letterSpacing: '4px',
+                  opacity: 1,
+                  fontSize: '1.1rem',
+                  color: '#d4a853',
+                  textShadow: '0 0 10px rgba(212,168,83,0.35)',
+                  marginTop: '32px',
+                  whiteSpace: 'nowrap'
+                }}
+              >
+                UPDATING SOON
+              </div>
+            </div>
           </GlassCard>
         </main>
 

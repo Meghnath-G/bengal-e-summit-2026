@@ -38,16 +38,11 @@ const slides = [
 
 export default function Gallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [transitionEnabled, setTransitionEnabled] = useState(true);
   const [lightboxActive, setLightboxActive] = useState(false);
   const [lightboxImg, setLightboxImg] = useState('');
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % slides.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+  const extendedSlides = [...slides, slides[0]];
 
   // Section Header Fade Up Animation
   useEffect(() => {
@@ -67,9 +62,32 @@ export default function Gallery() {
   useEffect(() => {
     if (lightboxActive) return; // Stop auto-sliding when modal is open
 
-    const timer = setInterval(handleNext, 4000);
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => prev + 1);
+    }, 3800); // Slide every ~3.8 seconds
+
     return () => clearInterval(timer);
   }, [lightboxActive]);
+
+  // Seamless infinite loop reset logic
+  useEffect(() => {
+    if (currentIndex === slides.length) {
+      // Wait for the transition to finish (1000ms)
+      const timeout = setTimeout(() => {
+        setTransitionEnabled(false);
+        setCurrentIndex(0);
+      }, 1000);
+      return () => clearTimeout(timeout);
+    } else if (currentIndex === 0 && !transitionEnabled) {
+      // Restore transition after the instant reset is painted
+      const frame = requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTransitionEnabled(true);
+        });
+      });
+      return () => cancelAnimationFrame(frame);
+    }
+  }, [currentIndex, transitionEnabled]);
 
   // Safe body scroll lock & cleanup
   useEffect(() => {
@@ -95,9 +113,12 @@ export default function Gallery() {
           <div
             className="slider-container"
             id="slider-container"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            style={{
+              transform: `translateX(-${currentIndex * 100}%)`,
+              transition: transitionEnabled ? 'transform 1s cubic-bezier(0.22, 1, 0.36, 1)' : 'none',
+            }}
           >
-            {slides.map((slide, index) => (
+            {extendedSlides.map((slide, index) => (
               <div
                 key={index}
                 className="slider-slide"
@@ -110,8 +131,6 @@ export default function Gallery() {
               </div>
             ))}
           </div>
-          <button className="slider-btn slider-prev" id="slider-prev" onClick={handlePrev}>&#10094;</button>
-          <button className="slider-btn slider-next" id="slider-next" onClick={handleNext}>&#10095;</button>
         </div>
       </section>
 

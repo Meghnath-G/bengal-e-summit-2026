@@ -11,7 +11,16 @@ export default function TeamCard({ name, role, image, phone1, phone2 }) {
       />
       <div className="card-panel">
         <h3 className="card-name">{name}</h3>
-        {role && <p className="card-role">{role}</p>}
+        {role && (
+          <p className="card-role">
+            {role.split('\n').map((line, index) => (
+              <span key={index}>
+                {line}
+                <br />
+              </span>
+            ))}
+          </p>
+        )}
         {phone1 && (
           <p className="card-phone">
             {phone1}

@@ -102,8 +102,9 @@
 }
 
 .teams-page-container .single-card {
-    grid-template-columns: 220px;
+    grid-template-columns: 340px;
 }
+
 
 .teams-page-container .four-col {
     grid-template-columns: repeat(4, 1fr);

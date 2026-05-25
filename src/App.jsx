@@ -49,6 +49,14 @@ export default function App() {
   useEffect(() => {
     preloadHeroFrames();
 
+    // Global image drag protection (blocks native drag behaviors across all browsers)
+    const handleDragStart = (e) => {
+      if (e.target.tagName && e.target.tagName.toUpperCase() === 'IMG') {
+        e.preventDefault();
+      }
+    };
+    document.addEventListener('dragstart', handleDragStart);
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -67,6 +75,7 @@ export default function App() {
 
     return () => {
       lenis.destroy();
+      document.removeEventListener('dragstart', handleDragStart);
     };
   }, []);
 

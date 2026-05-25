@@ -8,7 +8,7 @@ export const teamData = {
     {
       id: 'advisor-1',
       name: 'DR. SATYAJIT CHAKRABARTI',
-      role: 'Vice Chancellor, UEM Kolkata Director, IEM Kolkata',
+      role: 'Vice Chancellor, UEM, Kolkata\nDirector, IEM, Kolkata',
       image: advisorImg
     }
   ],

@@ -3,48 +3,75 @@ import { Link, useLocation } from 'react-router-dom';
 import bgm from '../../../assets/bgm.mp3';
 import './Navbar.css';
 
+// GLOBAL AUDIO INSTANCE
+// Persists outside the component lifecycle to survive route navigation
+let globalAudio = null;
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRightRef = useRef(null);
   const location = useLocation();
 
-  const audioRef = useRef(null);
   const [isMuted, setIsMuted] = useState(false);
 
   useEffect(() => {
-    audioRef.current = new Audio(bgm);
+    // 1. Initialize only if it doesn't exist yet
+    if (!globalAudio) {
+      globalAudio = new Audio(bgm);
 
-    // Automatically play theme music by default
-    audioRef.current.play().catch(err => {
-      console.warn("Autoplay prevented:", err);
-    });
+      // Automatically play theme music by default
+      globalAudio.play().catch(err => {
+        console.warn("Autoplay prevented:", err);
+      });
 
-    const handleEnded = () => {
-      // Audio ended
-    };
-    audioRef.current.addEventListener('ended', handleEnded);
+      const handleEnded = () => {
+        // Audio ended
+      };
+      globalAudio.addEventListener('ended', handleEnded);
 
+      const unlockAudio = () => {
+        if (globalAudio && globalAudio.paused) {
+          globalAudio.play().catch(() => {
+            // Ignore further aborted plays to avoid console spam
+          });
+        }
+        removeUnlockListeners();
+      };
+
+      const removeUnlockListeners = () => {
+        document.removeEventListener('click', unlockAudio);
+        document.removeEventListener('touchstart', unlockAudio);
+        document.removeEventListener('pointerdown', unlockAudio);
+        document.removeEventListener('keydown', unlockAudio);
+      };
+
+      document.addEventListener('click', unlockAudio);
+      document.addEventListener('touchstart', unlockAudio);
+      document.addEventListener('pointerdown', unlockAudio);
+      document.addEventListener('keydown', unlockAudio);
+    } else {
+      // 2. On remount (route change), sync local UI state with persistent audio state
+      setIsMuted(globalAudio.muted);
+    }
+    
+    // Explicitly DO NOT pause or destroy globalAudio on unmount
     return () => {
-      if (audioRef.current) {
-        audioRef.current.removeEventListener('ended', handleEnded);
-        audioRef.current.pause();
-        audioRef.current = null;
-      }
+      // Intentionally left blank to keep music playing during navigation
     };
   }, []);
 
   const toggleAudio = () => {
-    if (!audioRef.current) return;
+    if (!globalAudio) return;
 
     // If playback was blocked initially by browser policies, ensure it starts
-    if (audioRef.current.paused) {
-      audioRef.current.play().catch(err => {
+    if (globalAudio.paused) {
+      globalAudio.play().catch(err => {
         console.error("Audio playback failed:", err);
       });
     }
 
-    const newMutedState = !isMuted;
-    audioRef.current.muted = newMutedState;
+    const newMutedState = !globalAudio.muted;
+    globalAudio.muted = newMutedState;
     setIsMuted(newMutedState);
   };
 
