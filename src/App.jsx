@@ -60,12 +60,12 @@ export default function App() {
     const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
 
     const lenis = new Lenis({
-      duration: isMobile ? 0.6 : 1.2,
+      duration: isMobile ? 0.7 : 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smooth: true,
       syncTouch: isMobile,
-      touchMultiplier: isMobile ? 2.3 : 1,
-      syncTouchLerp: isMobile ? 0.15 : undefined,
+      touchMultiplier: isMobile ? 2.0 : 1,
+      syncTouchLerp: isMobile ? 0.12 : undefined,
     });
     lenisRef.current = lenis;
 
