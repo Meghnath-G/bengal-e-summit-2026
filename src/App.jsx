@@ -64,7 +64,7 @@ export default function App() {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smooth: true,
       syncTouch: isMobile,
-      touchMultiplier: isMobile ? 2.8 : 1,
+      touchMultiplier: isMobile ? 2.3 : 1,
       syncTouchLerp: isMobile ? 0.15 : undefined,
     });
     lenisRef.current = lenis;
@@ -94,7 +94,7 @@ export default function App() {
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
       lenisRef.current?.start();
-      
+
       // Give DOM a frame to update before refreshing ScrollTrigger
       requestAnimationFrame(() => {
         ScrollTrigger.refresh();
