@@ -18,6 +18,7 @@ export default function Navbar() {
     // 1. Initialize only if it doesn't exist yet
     if (!globalAudio) {
       globalAudio = new Audio(bgm);
+      globalAudio.loop = true;
 
       // Automatically play theme music by default
       globalAudio.play().catch(err => {
@@ -29,31 +30,36 @@ export default function Navbar() {
       };
       globalAudio.addEventListener('ended', handleEnded);
 
-      const unlockAudio = () => {
-        if (globalAudio && globalAudio.paused) {
-          globalAudio.play().catch(() => {
-            // Ignore further aborted plays to avoid console spam
-          });
-        }
-        removeUnlockListeners();
-      };
+      const unlockAudio = async () => {
+        if (!globalAudio) return;
 
+        try {
+          await globalAudio.play();
+          removeUnlockListeners();
+        } catch (err) {
+          console.warn("Audio unlock failed, waiting for next interaction");
+        }
+      };
       const removeUnlockListeners = () => {
         document.removeEventListener('click', unlockAudio);
         document.removeEventListener('touchstart', unlockAudio);
+        document.removeEventListener('touchend', unlockAudio);
         document.removeEventListener('pointerdown', unlockAudio);
+        document.removeEventListener('pointerup', unlockAudio);
         document.removeEventListener('keydown', unlockAudio);
       };
 
       document.addEventListener('click', unlockAudio);
       document.addEventListener('touchstart', unlockAudio);
+      document.addEventListener('touchend', unlockAudio);
       document.addEventListener('pointerdown', unlockAudio);
+      document.addEventListener('pointerup', unlockAudio);
       document.addEventListener('keydown', unlockAudio);
     } else {
       // 2. On remount (route change), sync local UI state with persistent audio state
       setIsMuted(globalAudio.muted);
     }
-    
+
     // Explicitly DO NOT pause or destroy globalAudio on unmount
     return () => {
       // Intentionally left blank to keep music playing during navigation

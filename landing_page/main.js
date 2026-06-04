@@ -500,12 +500,12 @@ window.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     // Generate cards for tracks
     const imageFiles = [
-        "DSC_0128.JPG", "IMG_0597.JPG", "IMG_7162.JPG", "IMG_9607.JPG", "IMG_9610.JPG",
-        "IMG_9645.JPG", "_A740023.JPG", "_A740046.JPG", "_DSC0205.JPG", "_DSC0248.JPG",
-        "_DSC5041.JPG", "_DSC5052.JPG", "_DSC5068.JPG", "_DSC9446.JPG", "_DSC9462.JPG",
-        "_DSC9468.JPG", "_DSC9485.JPG", "_DSC9500.JPG", "_DSC9536.JPG", "_DSC9598.JPG",
-        "_DSC9624.JPG", "_MG_0802.JPG", "_MG_5474.JPG", "_MG_5486.JPG", "_MG_5810.JPG",
-        "_MG_5847.JPG", "_MG_5857.JPG", "_MG_5872.JPG", "_ZVE7217.JPG", "_ZVE7522.JPG"
+        'img1_jpg.JPG', 'img2_jpg.JPG', 'img3_jpg.JPG', 'img4_jpg.JPG', 'img5_jpg.JPG',
+        'img6_jpg.JPG', 'img7_jpg.JPG', 'img8_jpg.JPG', 'img9_jpg.JPG', 'img10_jpg.JPG',
+        'img11_jpg.JPG', 'img12_jpg.JPG', 'img13_jpg.JPG', 'img14_jpg.JPG', 'img15_jpg.JPG',
+        'img16_jpg.JPG', 'img17_webp.webp', 'img18_webp.webp', 'img19_webp.webp', 'img20_webp.webp',
+        'img21_webp.webp', 'img22_webp.webp', 'img23_webp.webp', 'img24_webp.webp', 'img25_webp.webp',
+        'img26_webp.webp', 'img27_webp.webp', 'img28_webp.webp', 'img29_webp.webp', 'img30_jpg.JPG',
     ];
 
     const rows = [
@@ -602,7 +602,7 @@ function initChakraModel() {
 
     // Setup scene, camera, renderer
     const scene = new THREE.Scene();
-    
+
     // Transparent background
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -649,14 +649,14 @@ function initChakraModel() {
     // Load PBR Textures Manually
     const texLoader = new THREE.TextureLoader();
     const basePath = 'models/sudarshan_chakra/';
-    
+
     const colorMap = texLoader.load(basePath + 'DefaultMaterial_Base_color_1.png');
     colorMap.encoding = THREE.sRGBEncoding;
     colorMap.flipY = false;
-    
+
     const metalRoughMap = texLoader.load(basePath + 'DefaultMaterial_Metallic-DefaultMaterial_Roughness_2@channel.png');
     metalRoughMap.flipY = false;
-    
+
     const normalMap = texLoader.load(basePath + 'DefaultMaterial_Normal_OpenGL_0.png');
     normalMap.flipY = false;
 
@@ -664,7 +664,7 @@ function initChakraModel() {
     const loader = new THREE.GLTFLoader();
     loader.load(basePath + 'Chakra.glb', function (gltf) {
         chakraModel = gltf.scene;
-        
+
         // Attach PBR textures and configure materials for cinematic look
         chakraModel.traverse((child) => {
             if (child.isMesh) {
@@ -675,23 +675,23 @@ function initChakraModel() {
                 child.material.metalnessMap = metalRoughMap;
                 child.material.roughnessMap = metalRoughMap;
                 child.material.normalMap = normalMap;
-                
+
                 child.material.metalness = 1.0;
-                child.material.roughness = 1.0; 
+                child.material.roughness = 1.0;
                 child.material.envMapIntensity = 1.5; // Boost metallic reflections
                 child.material.needsUpdate = true;
             }
         });
-        
+
         // Center and scale the model dynamically
         const box = new THREE.Box3().setFromObject(chakraModel);
         const center = box.getCenter(new THREE.Vector3());
         const size = box.getSize(new THREE.Vector3());
         const maxDim = Math.max(size.x, size.y, size.z);
-        
+
         if (maxDim > 0) {
             const scale = 3.5 / maxDim; // Make it large enough to dominate the left side
-            
+
             chakraModel.position.x = -center.x * scale;
             chakraModel.position.y = -center.y * scale;
             chakraModel.position.z = -center.z * scale;
@@ -700,11 +700,11 @@ function initChakraModel() {
 
         const wrapper = new THREE.Group();
         wrapper.add(chakraModel);
-        
+
         // Tilt slightly for cinematic perspective
         wrapper.rotation.x = 0.3;
         wrapper.rotation.z = -0.1;
-        
+
         scene.add(wrapper);
         chakraModel = wrapper; // for rotation in loop
     }, undefined, function (error) {
@@ -737,7 +737,7 @@ function initChakraModel() {
         if (chakraModel) {
             // Auto rotation (slow)
             chakraModel.rotation.y += 0.002;
-            
+
             // Subtle mouse follow (smooth easing)
             targetX = mouseX * 0.5;
             targetY = mouseY * 0.5;
@@ -753,11 +753,11 @@ function initChakraModel() {
 // Initialize Statistics and 3D Model independently
 document.addEventListener('DOMContentLoaded', () => {
     // Only initialize if the element exists
-    if(document.getElementById('statistics-showcase')) {
+    if (document.getElementById('statistics-showcase')) {
         initChakraModel();
-        
+
         // Stats Scroll Animations (GSAP)
-        if(typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
             gsap.utils.toArray('.stat-block').forEach((block, i) => {
                 gsap.to(block, {
                     scrollTrigger: {

@@ -3,12 +3,12 @@ import './FlashbackSection.css';
 
 // Exact image list from original main.js
 const IMAGE_FILES = [
-  'DSC_0128.JPG', 'IMG_0597.JPG', 'IMG_7162.JPG', 'IMG_9607.JPG', 'IMG_9610.JPG',
-  'IMG_9645.JPG', '_A740023.JPG', '_A740046.JPG', '_DSC0205.JPG', '_DSC0248.JPG',
-  '_DSC5041.JPG', '_DSC5052.JPG', '_DSC5068.JPG', '_DSC9446.JPG', '_DSC9462.JPG',
-  '_DSC9468.JPG', '_DSC9485.JPG', '_DSC9500.JPG', '_DSC9536.JPG', '_DSC9598.JPG',
-  '_DSC9624.JPG', '_MG_0802.JPG', '_MG_5474.JPG', '_MG_5486.JPG', '_MG_5810.JPG',
-  '_MG_5847.JPG', '_MG_5857.JPG', '_MG_5872.JPG', '_ZVE7217.JPG', '_ZVE7522.JPG',
+  'img1_jpg.JPG', 'img2_jpg.JPG', 'img3_jpg.JPG', 'img4_jpg.JPG', 'img5_jpg.JPG',
+  'img6_jpg.JPG', 'img7_jpg.JPG', 'img8_jpg.JPG', 'img9_jpg.JPG', 'img10_jpg.JPG',
+  'img11_jpg.JPG', 'img12_jpg.JPG', 'img13_jpg.JPG', 'img14_jpg.JPG', 'img15_jpg.JPG',
+  'img16_jpg.JPG', 'img17_webp.webp', 'img18_webp.webp', 'img19_webp.webp', 'img20_webp.webp',
+  'img21_webp.webp', 'img22_webp.webp', 'img23_webp.webp', 'img24_webp.webp', 'img25_webp.webp',
+  'img26_webp.webp', 'img27_webp.webp', 'img28_webp.webp', 'img29_webp.webp', 'img30_jpg.JPG',
 ];
 
 // Row slices — exact from original main.js
