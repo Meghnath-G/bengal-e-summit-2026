@@ -28,6 +28,27 @@ export default function HeroSection() {
     const images = [];
     const frames = { currentIndex: 0 };
 
+    // Reset DOM elements to initial state (clean slate)
+    gsap.set('.hero-section', { opacity: 1, y: 0, scale: 1 });
+    gsap.set('.plot-section', { opacity: 0 });
+    gsap.set('.continue-text', { opacity: 0 });
+    gsap.set('.blackout-overlay', { opacity: 0 });
+    gsap.set('.climax-section', { opacity: 0 });
+
+    const resetScroll = () => {
+      window.scrollTo(0, 0);
+      if (window.lenis) {
+        window.lenis.scrollTo(0, { immediate: true });
+      }
+      ScrollTrigger.refresh();
+    };
+
+    // Reset immediately on mount
+    resetScroll();
+
+    // Reset scroll positions shortly after mounting to override any browser restoration
+    const scrollTimer = setTimeout(resetScroll, 50);
+
     // Resize — exact logic from original resizeCanvas()
     function resizeCanvas() {
       const dpr = Math.max(window.devicePixelRatio || 1, 2);
@@ -191,6 +212,7 @@ export default function HeroSection() {
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       triggers.forEach(t => t.kill());
+      clearTimeout(scrollTimer);
     };
   }, []);
 

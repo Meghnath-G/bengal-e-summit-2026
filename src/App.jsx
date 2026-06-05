@@ -5,6 +5,7 @@ import Lenis from 'lenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './styles/globals.css';
+import { useLocation } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +45,7 @@ function preloadHeroFrames() {
 export default function App() {
   const [loading, setLoading] = useState(true);
   const lenisRef = useRef(null);
+  const location = useLocation();
 
   // Initialize Lenis once
   useEffect(() => {
@@ -68,6 +70,7 @@ export default function App() {
       syncTouchLerp: isMobile ? 0.12 : undefined,
     });
     lenisRef.current = lenis;
+    window.lenis = lenis;
 
     // Synchronize Lenis with GSAP ScrollTrigger
     lenis.on('scroll', ScrollTrigger.update);
@@ -80,6 +83,7 @@ export default function App() {
 
     return () => {
       lenis.destroy();
+      window.lenis = null;
       document.removeEventListener('dragstart', handleDragStart);
     };
   }, []);
@@ -107,6 +111,22 @@ export default function App() {
       document.documentElement.style.overflow = '';
     };
   }, [loading]);
+
+  // Reset scroll and refresh ScrollTrigger on route change (FIX 1)
+  useEffect(() => {
+    // Scroll native window to top
+    window.scrollTo(0, 0);
+
+    // Reset Lenis scroll position instantly if it exists
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    }
+
+    // Give DOM a frame to update before refreshing ScrollTrigger
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+  }, [location.pathname]);
 
   return (
     <>
