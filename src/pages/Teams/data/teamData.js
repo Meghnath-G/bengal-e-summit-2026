@@ -3,6 +3,18 @@ import faculty1Img from '../../../assets/teams/faculty-exec-1.webp';
 import faculty2Img from '../../../assets/teams/faculty-exec-2.jpeg';
 import faculty3Img from '../../../assets/teams/faculty-exec-3.webp';
 
+// Event Leads imports
+import utkarshImg from '../../../assets/teams/utkarsh.webp';
+import sulagnaImg from '../../../assets/teams/sulagna.webp';
+import swastikaImg from '../../../assets/teams/swastika.webp';
+
+// Website Developers imports
+import meghnathImg from '../../../assets/teams/meghnath-1.jpeg';
+import dishaImg from '../../../assets/teams/disha.jpeg';
+import chintanImg from '../../../assets/teams/chintan.jpg';
+import jitankaImg from '../../../assets/teams/jitanka.jpeg';
+import jishnuImg from '../../../assets/teams/jishnu.jpeg';
+
 export const teamData = {
   advisors: [
     {
@@ -32,6 +44,58 @@ export const teamData = {
       name: 'DR. MALAY GANGOPADHYAY',
       role: 'Vice Principal, IEM Saltlake, Kolkata',
       image: faculty1Img
+    }
+  ],
+  eventLeads: [
+    {
+      id: 'event-lead-1',
+      name: 'Utkarsh Srivastava',
+      role: '+91-79801 44505',
+      image: utkarshImg
+    },
+    {
+      id: 'event-lead-2',
+      name: 'Sulagna Roy',
+      role: '+91-74397 11702',
+      image: sulagnaImg
+    },
+    {
+      id: 'event-lead-3',
+      name: 'Swastika Talukdar',
+      role: '+91-89610 05299',
+      image: swastikaImg
+    }
+  ],
+  websiteDevelopers: [
+    {
+      id: 'web-dev-1',
+      name: 'Meghnath Gorai',
+      role: 'Website Developer',
+      image: meghnathImg
+    },
+    {
+      id: 'web-dev-2',
+      name: 'Disha Nanda',
+      role: 'Website Developer',
+      image: dishaImg
+    },
+    {
+      id: 'web-dev-3',
+      name: 'Chintan Mallick',
+      role: 'Website Developer',
+      image: chintanImg
+    },
+    {
+      id: 'web-dev-4',
+      name: 'Jitanka Sarkar',
+      role: 'Website Developer',
+      image: jitankaImg
+    },
+    {
+      id: 'web-dev-5',
+      name: 'Jishnu',
+      role: 'Website Developer',
+      image: jishnuImg
     }
   ]
 };

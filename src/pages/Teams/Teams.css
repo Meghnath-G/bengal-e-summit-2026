@@ -240,6 +240,20 @@
     background: linear-gradient(to right, transparent, var(--gold-mid), transparent);
 }
 
+.teams-page-container .web-dev-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    max-width: 780px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.teams-page-container .web-dev-grid .team-card {
+    width: 220px;
+}
+
 /* SCROLL REVEAL INITIAL STATES */
 .teams-page-container .section-title,
 .teams-page-container .glowing-divider,

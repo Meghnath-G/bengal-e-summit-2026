@@ -100,10 +100,18 @@ export default function Teams() {
             members={teamData.facultyExecutives}
           />
 
-          {/* Student Team Section */}
+          {/* Event Leads Section */}
           <TeamSection
             title="EVENT LEADS"
-            isComingSoon={true}
+            gridClass="three-col"
+            members={teamData.eventLeads}
+          />
+
+          {/* Website Developers Section */}
+          <TeamSection
+            title="WEBSITE DEVELOPERS"
+            gridClass="web-dev-grid"
+            members={teamData.websiteDevelopers}
           />
         </main>
 

@@ -38,7 +38,7 @@ export default function Partners() {
           <PageHero />
 
           {/* SECTION 1: MEDIA PARTNER (GLASS CARD) */}
-          <GlassCard title="MEDIA PARTNER">
+          <GlassCard title="IN ASSOCIATION WITH">
             <MediaPartnerCard
               name={mediaPartner.name}
               role={mediaPartner.role}
