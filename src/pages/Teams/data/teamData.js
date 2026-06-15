@@ -50,19 +50,19 @@ export const teamData = {
     {
       id: 'event-lead-1',
       name: 'Utkarsh Srivastava',
-      role: '+91-79801 44505',
+      phone1: '+91-79801 44505',
       image: utkarshImg
     },
     {
       id: 'event-lead-2',
       name: 'Sulagna Roy',
-      role: '+91-74397 11702',
+      phone1: '+91-74397 11702',
       image: sulagnaImg
     },
     {
       id: 'event-lead-3',
       name: 'Swastika Talukdar',
-      role: '+91-89610 05299',
+      phone1: '+91-89610 05299',
       image: swastikaImg
     }
   ],
@@ -70,7 +70,8 @@ export const teamData = {
     {
       id: 'web-dev-1',
       name: 'Meghnath Gorai',
-      role: 'Website Developer',
+      role: 'Web & Technical Head',
+      phone1: '+91-81672 43225',
       image: meghnathImg
     },
     {
@@ -93,7 +94,7 @@ export const teamData = {
     },
     {
       id: 'web-dev-5',
-      name: 'Jishnu',
+      name: 'Jishnu Roy',
       role: 'Website Developer',
       image: jishnuImg
     }

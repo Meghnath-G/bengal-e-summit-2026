@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Frame sequence config — exactly matching original main.js
 const FRAME_COUNT = 181;
 const FRAME_PREFIX = '/video_project/web_frame_loading-page';
-const FRAME_EXT = '.jpg';
+const FRAME_EXT = '.webp';
 
 function padFrame(n) {
   return n.toString().padStart(5, '0');

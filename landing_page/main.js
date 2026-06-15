@@ -4,7 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Configuration for frames
 const frameCount = 181;
 const framePrefix = "video_project/web_frame_loading-page";
-const frameExtension = ".jpg";
+const frameExtension = ".webp";
 const images = [];
 const frames = {
     currentIndex: 0

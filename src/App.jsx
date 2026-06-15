@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Frame preload globals
 const HERO_FRAME_COUNT = 181;
 const HERO_FRAME_PREFIX = '/video_project/web_frame_loading-page';
-const HERO_FRAME_EXT = '.jpg';
+const HERO_FRAME_EXT = '.webp';
 
 function padHeroFrame(n) {
   return n.toString().padStart(5, '0');

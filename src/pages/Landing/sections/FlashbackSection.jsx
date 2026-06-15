@@ -112,33 +112,6 @@ export default function FlashbackSection() {
 
         </div>
 
-        {/* Floating video player — structure preserved, MP4 placeholder until file is supplied */}
-        <div className="floating-video-container">
-          <div className="video-wrapper">
-            <video
-              ref={videoRef}
-              loop
-              muted
-              playsInline
-              onClick={handlePlayPause}
-            // src="/videos/for_carousel/video.mp4" — add when MP4 file is available
-            >
-              {/* MP4 source placeholder — file not yet available */}
-              <source src="/videos/for_carousel/video.mp4" type="video/mp4" />
-            </video>
-            <button
-              className="play-pause-btn"
-              ref={playBtnRef}
-              onClick={handlePlayPause}
-              aria-label="Play/Pause"
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M5 3l14 9-14 9V3z" strokeLinejoin="round" strokeLinecap="round" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
       </div>
     </section>
   );
