@@ -262,7 +262,7 @@ export default function HeroSection() {
                 <span className="cinematic-text year-text">2026</span>
                 <span className="decorative-line"></span>
               </span>
-              <span className="cinematic-text hero-event-date">25th &amp; 26th of July</span>
+              <span className="cinematic-text hero-event-date">29th &amp; 30th of August</span>
             </h1>
 
             <div className="hero-actions">

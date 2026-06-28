@@ -19,7 +19,7 @@ export default function FooterCTA() {
         <p className="footer-sub">THE STORY NEVER ENDS</p>
         <h2 className="footer-heading">
           THE LEGACY CONTINUES<br />
-          <span className="footer-year">— JULY 2026</span>
+          <span className="footer-year">— AUGUST 2026</span>
         </h2>
         <div className="footer-rule"></div>
         <div className="footer-chevron">

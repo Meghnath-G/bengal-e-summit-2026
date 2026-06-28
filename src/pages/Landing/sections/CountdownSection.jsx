@@ -6,20 +6,20 @@ import './CountdownSection.css';
 gsap.registerPlugin(ScrollTrigger);
 
 // Target date — exact from original main.js
-const TARGET_DATE = new Date('2026-07-25T10:00:00');
+const TARGET_DATE = new Date('2026-08-29T10:00:00');
 
 export default function CountdownSection() {
   const sectionRef = useRef(null);
-  const tilesRef   = useRef(null);
-  const daysRef    = useRef(null);
-  const hoursRef   = useRef(null);
+  const tilesRef = useRef(null);
+  const daysRef = useRef(null);
+  const hoursRef = useRef(null);
   const minutesRef = useRef(null);
   const secondsRef = useRef(null);
 
   useEffect(() => {
     const tracks = {
-      days:    daysRef.current,
-      hours:   hoursRef.current,
+      days: daysRef.current,
+      hours: hoursRef.current,
       minutes: minutesRef.current,
       seconds: secondsRef.current,
     };
@@ -29,20 +29,20 @@ export default function CountdownSection() {
       if (!trackEl) return;
       const padded = String(value).padStart(2, '0');
       trackEl.innerHTML = '';
-      const above   = document.createElement('div');
+      const above = document.createElement('div');
       above.className = 'tile-digit';
       above.textContent = padded;
       const current = document.createElement('div');
       current.className = 'tile-digit';
       current.textContent = padded;
-      const below   = document.createElement('div');
+      const below = document.createElement('div');
       below.className = 'tile-digit';
       below.textContent = padded;
       trackEl.appendChild(above);
       trackEl.appendChild(current);
       trackEl.appendChild(below);
       const h = trackEl.parentElement?.offsetHeight || 110;
-      trackEl.style.transform  = `translateY(-${h}px) translateZ(0)`;
+      trackEl.style.transform = `translateY(-${h}px) translateZ(0)`;
       trackEl.style.transition = 'none';
     }
 
@@ -50,23 +50,23 @@ export default function CountdownSection() {
     function rollTo(trackEl, newValue) {
       if (!trackEl) return;
       const padded = String(newValue).padStart(2, '0');
-      const h      = trackEl.parentElement?.offsetHeight || 110;
+      const h = trackEl.parentElement?.offsetHeight || 110;
       const digits = trackEl.querySelectorAll('.tile-digit');
       if (digits[2]) digits[2].textContent = padded;
       trackEl.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
-      trackEl.style.transform  = `translateY(-${h * 2}px) translateZ(0)`;
+      trackEl.style.transform = `translateY(-${h * 2}px) translateZ(0)`;
       setTimeout(() => {
         if (digits[0]) digits[0].textContent = padded;
         if (digits[1]) digits[1].textContent = padded;
         if (digits[2]) digits[2].textContent = padded;
         trackEl.style.transition = 'none';
-        trackEl.style.transform  = `translateY(-${h}px) translateZ(0)`;
+        trackEl.style.transform = `translateY(-${h}px) translateZ(0)`;
       }, 520);
     }
 
     // Exact initTracks() from original main.js
     function initTracks() {
-      const now  = new Date();
+      const now = new Date();
       const diff = TARGET_DATE - now;
       if (diff <= 0) {
         Object.values(tracks).forEach(t => buildTrack(t, 0));
@@ -76,8 +76,8 @@ export default function CountdownSection() {
       const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const s = Math.floor((diff % (1000 * 60)) / 1000);
-      buildTrack(tracks.days,    d);
-      buildTrack(tracks.hours,   h);
+      buildTrack(tracks.days, d);
+      buildTrack(tracks.hours, h);
       buildTrack(tracks.minutes, m);
       buildTrack(tracks.seconds, s);
       return { days: d, hours: h, minutes: m, seconds: s };
@@ -87,7 +87,7 @@ export default function CountdownSection() {
     let prevValues = initTracks() || { days: -1, hours: -1, minutes: -1, seconds: -1 };
 
     function updateCountdown() {
-      const now  = new Date();
+      const now = new Date();
       const diff = TARGET_DATE - now;
       if (diff <= 0) {
         Object.entries(tracks).forEach(([unit, track]) => {
@@ -96,8 +96,8 @@ export default function CountdownSection() {
         return;
       }
       const values = {
-        days:    Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours:   Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
         minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
         seconds: Math.floor((diff % (1000 * 60)) / 1000),
       };
@@ -195,7 +195,7 @@ export default function CountdownSection() {
         </div>
       </div>
 
-      <div className="countdown-date">JULY 2026 · IEM KOLKATA · WEST BENGAL</div>
+      <div className="countdown-date">AUGUST 2026 · IEM KOLKATA · WEST BENGAL</div>
     </section>
   );
 }
