@@ -50,6 +50,30 @@ export default function Partners() {
           <SectionDivider />
 
           {/* SECTION 2: PARTNERS LISTING (GLASS CARD) */}
+          <GlassCard title="COMMUNITY AND OUTREACH PARTNER">
+            <div className="media-partner-container">
+              <div className="media-partner-card">
+                <div className="card-inner">
+                  <img
+                    src="src/assets/partners/comandoutreach.webp"
+                    alt="LOGO"
+                    className="partner-logo"
+                  />
+                  <div className="shine-sweep"></div>
+                </div>
+              </div>
+              <div
+                className="media-partner-name"
+              >
+                Youth4Nation
+              </div>
+            </div>
+          </GlassCard>
+
+          {/* SECTION DIVIDER DIAMOND */}
+          <SectionDivider />
+
+          {/* SECTION 3: PARTNERS LISTING (GLASS CARD) */}
           <GlassCard title="PARTNERS">
             <div className="media-partner-container">
               <div className="media-partner-card">

@@ -2,6 +2,9 @@ import advisorImg from '../../../assets/teams/ADVISOR.webp';
 import faculty1Img from '../../../assets/teams/faculty-exec-1.webp';
 import faculty2Img from '../../../assets/teams/faculty-exec-2.jpeg';
 import faculty3Img from '../../../assets/teams/faculty-exec-3.webp';
+import faculty4Img from '../../../assets/teams/facultynew1.jpeg';
+import faculty5Img from '../../../assets/teams/facultynew2.jpeg';
+import faculty6Img from '../../../assets/teams/facultynew3.webp';
 
 // Event Leads imports
 import utkarshImg from '../../../assets/teams/utkarsh.webp';
@@ -44,6 +47,24 @@ export const teamData = {
       name: 'DR. MALAY GANGOPADHYAY',
       role: 'Vice Principal, IEM Saltlake, Kolkata',
       image: faculty1Img
+    },
+    {
+      id: 'faculty-4',
+      name: 'DIPTIMAN DASGUPTA',
+      role: 'Group COO - IEM UEM Group & IEM Research Foundation',
+      image: faculty4Img
+    },
+    {
+      id: 'faculty-5',
+      name: 'DR. SUBRATA CHATTOPADHYAY',
+      role: 'Professor & Dean Management, IEM Kolkata',
+      image: faculty5Img
+    },
+    {
+      id: 'faculty-6',
+      name: 'PROF. CHIRABRATA MAJUMDER',
+      role: 'Professor - HR, OB & Strategy\nDepartment of Management',
+      image: faculty6Img
     }
   ],
   eventLeads: [

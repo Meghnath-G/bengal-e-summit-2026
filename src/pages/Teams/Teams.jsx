@@ -8,14 +8,16 @@ import { teamData } from './data/teamData';
 import './Teams.css';
 
 export default function Teams() {
-  // Scroll Reveal Observer - activated immediately on mount
+  // Force the page to always start at the very top on reload/refresh
   useEffect(() => {
-    // Force the page to always start at the very top on reload/refresh
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
     window.scrollTo(0, 0);
+  }, []);
 
+  // Scroll Reveal Observer - runs on every render to catch newly added items during HMR
+  useEffect(() => {
     const observerOptions = {
       root: null,
       rootMargin: '0px',
@@ -40,7 +42,7 @@ export default function Teams() {
             }
           }
 
-          // Using Web Animations API for scroll reveal (matches original CSS/JS rule)
+          // Using Web Animations API for scroll reveal
           target.animate([
             { opacity: 0, transform: 'translateY(28px)' },
             { opacity: 1, transform: 'translateY(0)' }
@@ -69,13 +71,15 @@ export default function Teams() {
     );
 
     revealElements.forEach(el => {
-      revealObserver.observe(el);
+      if (el.style.opacity !== '1') {
+        revealObserver.observe(el);
+      }
     });
 
     return () => {
       revealObserver.disconnect();
     };
-  }, []);
+  });
 
   return (
     <CinematicTransition>
