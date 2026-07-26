@@ -9,6 +9,7 @@ import MediaPartnerCard from './components/MediaPartnerCard';
 import PartnerTier from './components/PartnerTier';
 import { partnersData } from './data/partnersData';
 import futuristicBg from '../../assets/partners/futuristicbg.webp';
+import outreachImg from '../../assets/partners/outreach.webp';
 import './Partners.css';
 
 export default function Partners() {
@@ -55,7 +56,7 @@ export default function Partners() {
               <div className="media-partner-card">
                 <div className="card-inner">
                   <img
-                    src="src/assets/partners/comandoutreach.webp"
+                    src={outreachImg}
                     alt="LOGO"
                     className="partner-logo"
                   />
