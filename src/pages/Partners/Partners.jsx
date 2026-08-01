@@ -10,6 +10,10 @@ import PartnerTier from './components/PartnerTier';
 import { partnersData } from './data/partnersData';
 import futuristicBg from '../../assets/partners/futuristicbg.webp';
 import outreachImg from '../../assets/partners/outreach.webp';
+import coinn from '../../assets/partners/coinn.webp';
+import wls from '../../assets/partners/wls.webp';
+import virtuinfo from '../../assets/partners/virtuinfo.webp';
+import cibet from '../../assets/partners/cibet.webp';
 import './Partners.css';
 
 export default function Partners() {
@@ -75,7 +79,96 @@ export default function Partners() {
           <SectionDivider />
 
           {/* SECTION 3: PARTNERS LISTING (GLASS CARD) */}
-          <GlassCard title="PARTNERS">
+          <GlassCard title="ASSOCIATE PARTNERS">
+            <div className="media-partner-container">
+              <div className="media-partner-card">
+                <div className="card-inner">
+                  <img
+                    src={coinn}
+                    alt="LOGO"
+                    className="partner-logo"
+                    style={{
+                      objectFit: "contain",
+                      padding: "8px",
+                      background: "#fff"
+                    }}
+                  />
+                  <div className="shine-sweep"></div>
+                </div>
+              </div>
+              <div
+                className="media-partner-name"
+              >
+                COINNOVATE VENTURES
+              </div>
+            </div>
+
+            <div className="media-partner-container">
+              <div className="media-partner-card">
+                <div className="card-inner">
+                  <img
+                    src={wls}
+                    alt="LOGO"
+                    className="partner-logo"
+                  />
+                  <div className="shine-sweep"></div>
+                </div>
+              </div>
+              <div
+                className="media-partner-name"
+              >
+                WORLD LEADER SUMMIT
+              </div>
+            </div>
+
+            <div className="media-partner-container">
+              <div className="media-partner-card">
+                <div className="card-inner">
+                  <img
+                    src={virtuinfo}
+                    alt="LOGO"
+                    className="partner-logo"
+                    style={{
+                      objectFit: "contain",
+                      padding: "8px",
+                      background: "#fff"
+                    }}
+                  />
+                  <div className="shine-sweep"></div>
+                </div>
+              </div>
+              <div
+                className="media-partner-name"
+              >
+                VIRTUAL INFOCOM
+              </div>
+            </div>
+
+            <div className="media-partner-container">
+              <div className="media-partner-card">
+                <div className="card-inner">
+                  <img
+                    src={cibet}
+                    alt="LOGO"
+                    className="partner-logo"
+                  />
+                  <div className="shine-sweep"></div>
+                </div>
+              </div>
+              <div
+                className="media-partner-name"
+              >
+                CIBET COUNCIL
+              </div>
+            </div>
+          </GlassCard>
+
+          {/* SECTION DIVIDER DIAMOND */}
+          <SectionDivider />
+
+
+          {/* SECTION 4: PARTNERS LISTING (GLASS CARD) */}
+          <GlassCard title="PARTNER">
             <div className="media-partner-container">
               <div className="media-partner-card">
                 <div className="card-inner">
@@ -99,7 +192,7 @@ export default function Partners() {
                   whiteSpace: 'nowrap'
                 }}
               >
-                UPDATING SOON
+                IEDC-ECE
               </div>
             </div>
           </GlassCard>
