@@ -14,6 +14,7 @@ import coinn from '../../assets/partners/coinn.webp';
 import wls from '../../assets/partners/wls.webp';
 import virtuinfo from '../../assets/partners/virtuinfo.webp';
 import cibet from '../../assets/partners/cibet.webp';
+import assocham from '../../assets/partners/assocham.webp';
 import './Partners.css';
 
 export default function Partners() {
@@ -159,6 +160,24 @@ export default function Partners() {
                 className="media-partner-name"
               >
                 CIBET COUNCIL
+              </div>
+            </div>
+
+            <div className="media-partner-container">
+              <div className="media-partner-card">
+                <div className="card-inner">
+                  <img
+                    src={assocham}
+                    alt="LOGO"
+                    className="partner-logo"
+                  />
+                  <div className="shine-sweep"></div>
+                </div>
+              </div>
+              <div
+                className="media-partner-name"
+              >
+                ASSOCHAM
               </div>
             </div>
           </GlassCard>
