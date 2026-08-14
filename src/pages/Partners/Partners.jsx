@@ -15,6 +15,11 @@ import wls from '../../assets/partners/wls.webp';
 import virtuinfo from '../../assets/partners/virtuinfo.webp';
 import cibet from '../../assets/partners/cibet.webp';
 import assocham from '../../assets/partners/assocham.webp';
+import multiverpr from '../../assets/partners/multiverpr.jpg';
+import glen from '../../assets/partners/glen.webp';
+import balaji from '../../assets/partners/balaji.webp';
+import ArrayVen from '../../assets/partners/ArrayVen.webp';
+import codecraft from '../../assets/partners/codecraft.svg';
 import './Partners.css';
 
 export default function Partners() {
@@ -45,6 +50,32 @@ export default function Partners() {
 
           {/* SECTION 1: MEDIA PARTNER (GLASS CARD) */}
           <GlassCard title="IN ASSOCIATION WITH">
+            <div className="media-partner-container">
+              <div className="media-partner-card">
+                <div className="card-inner">
+                  <img
+                    src="/images/logos/iedc.webp"
+                    alt="UPDATING SOON"
+                    className="partner-logo"
+                  />
+                  <div className="shine-sweep"></div>
+                </div>
+              </div>
+              <div
+                className="media-partner-name"
+                style={{
+                  letterSpacing: '4px',
+                  opacity: 1,
+                  fontSize: '1.1rem',
+                  color: '#d4a853',
+                  textShadow: '0 0 10px rgba(212,168,83,0.35)',
+                  marginTop: '32px',
+                  whiteSpace: 'nowrap'
+                }}
+              >
+                IEDC-ECE
+              </div>
+            </div>
             <MediaPartnerCard
               name={mediaPartner.name}
               role={mediaPartner.role}
@@ -55,13 +86,13 @@ export default function Partners() {
           {/* SECTION DIVIDER DIAMOND */}
           <SectionDivider />
 
-          {/* SECTION 2: PARTNERS LISTING (GLASS CARD) */}
-          <GlassCard title="COMMUNITY AND OUTREACH PARTNER">
+          {/* SECTION 2: ASSOCIATE PARTNERS LISTING (GLASS CARD) */}
+          <GlassCard title="ASSOCIATE PARTNER">
             <div className="media-partner-container">
               <div className="media-partner-card">
                 <div className="card-inner">
                   <img
-                    src={outreachImg}
+                    src={assocham}
                     alt="LOGO"
                     className="partner-logo"
                   />
@@ -71,7 +102,7 @@ export default function Partners() {
               <div
                 className="media-partner-name"
               >
-                Youth4Nation
+                ASSOCHAM
               </div>
             </div>
           </GlassCard>
@@ -79,8 +110,8 @@ export default function Partners() {
           {/* SECTION DIVIDER DIAMOND */}
           <SectionDivider />
 
-          {/* SECTION 3: PARTNERS LISTING (GLASS CARD) */}
-          <GlassCard title="ASSOCIATE PARTNERS">
+          {/* SECTION 3: INVESTORS (GLASS CARD) */}
+          <GlassCard title="INVESTORS">
             <div className="media-partner-container">
               <div className="media-partner-card">
                 <div className="card-inner">
@@ -167,7 +198,106 @@ export default function Partners() {
               <div className="media-partner-card">
                 <div className="card-inner">
                   <img
-                    src={assocham}
+                    src={multiverpr}
+                    alt="LOGO"
+                    className="partner-logo"
+                    style={{
+                      objectFit: "contain",
+                      padding: "8px",
+                      background: "#fff"
+                    }}
+                  />
+                  <div className="shine-sweep"></div>
+                </div>
+              </div>
+              <div
+                className="media-partner-name"
+              >
+                MULTIVERSE PR COMMUNICATIONS
+              </div>
+            </div>
+
+            <div className="media-partner-container">
+              <div className="media-partner-card">
+                <div className="card-inner">
+                  <img
+                    src={glen}
+                    alt="LOGO"
+                    className="partner-logo"
+                    style={{
+                      objectFit: "contain",
+                      padding: "8px",
+                      background: "#fff"
+                    }}
+                  />
+                  <div className="shine-sweep"></div>
+                </div>
+              </div>
+              <div
+                className="media-partner-name"
+              >
+                GLEN INDUSTRIES LTD.
+              </div>
+            </div>
+
+            <div className="media-partner-container">
+              <div className="media-partner-card">
+                <div className="card-inner">
+                  <img
+                    src={balaji}
+                    alt="LOGO"
+                    className="partner-logo"
+                    style={{
+                      objectFit: "contain",
+                      padding: "8px",
+                      background: "#fff"
+                    }}
+                  />
+                  <div className="shine-sweep"></div>
+                </div>
+              </div>
+              <div
+                className="media-partner-name"
+              >
+                SREE BALAJI
+              </div>
+            </div>
+
+            <div className="media-partner-container">
+              <div className="media-partner-card">
+                <div className="card-inner">
+                  <img
+                    src={ArrayVen}
+                    alt="LOGO"
+                    className="partner-logo"
+                    style={{
+                      objectFit: "contain",
+                      padding: "8px",
+                      background: "#fff"
+                    }}
+                  />
+                  <div className="shine-sweep"></div>
+                </div>
+              </div>
+              <div
+                className="media-partner-name"
+              >
+                ARRAY VENTURES
+              </div>
+            </div>
+
+          </GlassCard>
+
+          {/* SECTION DIVIDER DIAMOND */}
+          <SectionDivider />
+
+          {/* SECTION 4: PARTNERS LISTING (GLASS CARD) */}
+          <GlassCard title="COMMUNITY AND OUTREACH PARTNER">
+            <div className="media-partner-container">
+              <div className="media-partner-card">
+                <div className="card-inner">
+                  <img
+                    src={outreachImg}
                     alt="LOGO"
                     className="partner-logo"
                   />
@@ -177,7 +307,7 @@ export default function Partners() {
               <div
                 className="media-partner-name"
               >
-                ASSOCHAM
+                Youth4Nation
               </div>
             </div>
           </GlassCard>
@@ -186,33 +316,58 @@ export default function Partners() {
           <SectionDivider />
 
 
-          {/* SECTION 4: PARTNERS LISTING (GLASS CARD) */}
-          <GlassCard title="PARTNER">
+          {/* SECTION 5: EVENT PARTNER (GLASS CARD) */}
+          <GlassCard title="EVENT PARTNERS">
+            {/* Event name / subheading */}
+            <div
+              style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: "1.50rem",
+                fontWeight: 700,
+                color: "rgba(212, 168, 83, 0.85)",
+                letterSpacing: "3px",
+                textAlign: "center",
+                textTransform: "uppercase",
+                marginTop: "10px",
+                marginBottom: "20px"
+              }}
+            >
+              THIS IS BIZNESS!
+            </div>
             <div className="media-partner-container">
               <div className="media-partner-card">
                 <div className="card-inner">
                   <img
-                    src="/images/logos/iedc.webp"
-                    alt="UPDATING SOON"
+                    src={codecraft}
+                    alt="LOGO"
                     className="partner-logo"
+                    style={{
+                      objectFit: "contain",
+                      padding: "8px",
+                      background: "#fff"
+                    }}
                   />
                   <div className="shine-sweep"></div>
                 </div>
               </div>
-              <div
+              <a
+                href="https://codecrafters.io/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="media-partner-name"
                 style={{
-                  letterSpacing: '4px',
-                  opacity: 1,
-                  fontSize: '1.1rem',
-                  color: '#d4a853',
-                  textShadow: '0 0 10px rgba(212,168,83,0.35)',
-                  marginTop: '32px',
-                  whiteSpace: 'nowrap'
+                  textDecoration: "none",
+                  cursor: "pointer"
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.textDecoration = "underline";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.textDecoration = "none";
                 }}
               >
-                IEDC-ECE
-              </div>
+                CODECRAFTERS
+              </a>
             </div>
           </GlassCard>
         </main>
