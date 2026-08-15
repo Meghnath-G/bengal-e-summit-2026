@@ -21,6 +21,8 @@ import balaji from '../../assets/partners/balaji.webp';
 import ArrayVen from '../../assets/partners/ArrayVen.webp';
 import codecraft from '../../assets/partners/codecraft.svg';
 import './Partners.css';
+import kopai from '../../assets/partners/kopai.png';
+import osen from '../../assets/partners/osen.webp';
 
 export default function Partners() {
   const { mediaPartner, tiers } = partnersData;
@@ -368,6 +370,52 @@ export default function Partners() {
               >
                 CODECRAFTERS
               </a>
+            </div>
+
+            <div className="media-partner-container">
+              <div className="media-partner-card">
+                <div className="card-inner">
+                  <img
+                    src={kopai}
+                    alt="LOGO"
+                    className="partner-logo"
+                    style={{
+                      objectFit: "contain",
+                      padding: "8px",
+                      background: "#fff"
+                    }}
+                  />
+                  <div className="shine-sweep"></div>
+                </div>
+              </div>
+              <div
+                className="media-partner-name"
+              >
+                KOPAI
+              </div>
+            </div>
+
+            <div className="media-partner-container">
+              <div className="media-partner-card">
+                <div className="card-inner">
+                  <img
+                    src={osen}
+                    alt="LOGO"
+                    className="partner-logo"
+                    style={{
+                      objectFit: "contain",
+                      padding: "8px",
+                      background: "#fff"
+                    }}
+                  />
+                  <div className="shine-sweep"></div>
+                </div>
+              </div>
+              <div
+                className="media-partner-name"
+              >
+                OSEN
+              </div>
             </div>
           </GlassCard>
         </main>
