@@ -20,9 +20,9 @@ import glen from '../../assets/partners/glen.webp';
 import balaji from '../../assets/partners/balaji.webp';
 import ArrayVen from '../../assets/partners/ArrayVen.webp';
 import codecraft from '../../assets/partners/codecraft.svg';
-import './Partners.css';
 import kopai from '../../assets/partners/kopai.png';
-import osen from '../../assets/partners/osen.webp';
+import osen from '../../assets/partners/OSEN.webp';
+import './Partners.css';
 
 export default function Partners() {
   const { mediaPartner, tiers } = partnersData;
