@@ -268,6 +268,16 @@ export default function HeroSection() {
             <div className="hero-actions">
               <a href="https://forms.gle/CVJszvgztG12A59Y7" className="btn-solid">⚡ REGISTER NOW</a>
               <Link to="/events" className="btn-outline-gold">EXPLORE EVENTS</Link>
+              <a href="/event-schedule.webp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline-gold"
+                style={{
+                  animation: "scheduleButtonBlink 1.5s ease-in-out infinite"
+                }}
+              >
+                EVENT SCHEDULE
+              </a>
             </div>
 
             <div className="hero-venue">

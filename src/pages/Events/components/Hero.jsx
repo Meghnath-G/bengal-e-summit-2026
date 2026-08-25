@@ -24,6 +24,26 @@ export default function Hero() {
         <p className="hero-subtitle">ALL EVENTS · BENGAL E-SUMMIT 2026</p>
         <div className="hero-divider"></div>
         <p className="hero-tagline">The Path of Ascension</p>
+        <a href="/event-schedule.webp"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "inline-block",
+            border: "1px solid #d4a853",
+            color: "#d4a853",
+            fontFamily: "'Cinzel', serif",
+            textDecoration: "none",
+            padding: "16px 36px",
+            letterSpacing: "0.1em",
+            background: "rgba(4, 6, 14, 0.4)",
+            backdropFilter: "blur(10px)",
+            WebkitBackdropFilter: "blur(10px)",
+            boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
+            marginTop: "20px"
+          }}
+        >
+          EVENT SCHEDULE
+        </a>
       </div>
       <div className="scroll-cue" aria-label="Scroll down">⌄</div>
     </section>
